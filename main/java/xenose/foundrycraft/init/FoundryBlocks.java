@@ -10,19 +10,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.Refercence;
 import static xenose.foundrycraft.Refercence.FoundryCraftBlocks;
 
-import java.util.List;
-
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.blocks.ores.*;
 
 public class FoundryBlocks 
 {	
 	
-	public static Block[] blockList = new Block[1];
+	public static Block[] blockList = new Block[FoundryCraftBlocks.values().length];
 	
 	public static void init()
 	{
 		blockList[0] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);
+		blockList[1] = new BlockCobaltOre(Material.ROCK, FoundryCraftBlocks.COBALT_ORE.getUnlocalizedName(), FoundryCraftBlocks.COBALT_ORE.getRegistryName(), 15F);
+		blockList[2] = new BlockCopperOre(Material.ROCK, FoundryCraftBlocks.COPPER_ORE.getUnlocalizedName(), FoundryCraftBlocks.COPPER_ORE.getRegistryName(), 15F);
 		
 		System.out.println("Number of blocks in FoundryBlocks init: " + blockList.length);
 	}
@@ -33,8 +33,11 @@ public class FoundryBlocks
 		
 		for (int i = 0; i < blockList.length; i++) 
 		{
-			System.out.println(blockList[i].getUnlocalizedName());
-			registerFoundryBlock(blockList[i]);
+			if(blockList[i] != null)
+			{
+				System.out.println(blockList[i].getUnlocalizedName());
+				registerFoundryBlock(blockList[i]);
+			}
 		}
 	}
 	
@@ -50,7 +53,8 @@ public class FoundryBlocks
 	{
 		for (int i = 0; i < blockList.length; i++) 
 		{
-			registerRender(blockList[i]);
+			if(blockList[i] != null)
+				registerRender(blockList[i]);
 		}
 	}
 	
