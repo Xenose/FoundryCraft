@@ -6,10 +6,10 @@ import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 public class BlockLeadOre extends FoundryBlock
 {
 
-	public BlockLeadOre(Material materialIn, String UnlocalizedName, String registryName, float hardness) 
+	public BlockLeadOre(Material materialIn, String unlocalizedName, String registryName, float hardness) 
 	{
-		super(materialIn, UnlocalizedName, registryName, hardness);
-		setUnlocalizedNameAndRegistry(UnlocalizedName, registryName);
+		super(materialIn, unlocalizedName, registryName, hardness);
+		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
 	}
 
 }
