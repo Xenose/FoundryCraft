@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.ResourceLocation;
+import xenose.foundrycraft.Refercence;
 
 public class FoundryBlock extends Block
 {
@@ -20,17 +22,5 @@ public class FoundryBlock extends Block
 	{
 		setUnlocalizedName(unlocalized);
 		setRegistryName(registry);
-		
-		createJsonFile(unlocalized);
-	}
-	
-	public void createJsonFile(String unlocalizedName)
-	{
-		try{
-		File jsonFile = new File("../../../../../" + unlocalizedName + ".json");
-		
-		System.out.println(jsonFile);
-		}
-		finally {}
 	}
 }

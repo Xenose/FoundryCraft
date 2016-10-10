@@ -33,8 +33,18 @@ public class Refercence
 	{	
 		ALUMINIUM_ORE("aluminiumOre", "BlockAluminiumOre"),
 		COBALT_ORE("cobaltOre","BlockCobaltOre"),
-		COPPER_ORE("copperOre","BlockCopperOre");
-		
+		COPPER_ORE("copperOre","BlockCopperOre"),
+		LEAD_ORE("leadOre", "BlockLeadOre"),
+		LITHIUM_ORE("lithiumOre","BlockLithiumOre"),
+		MAGNESIUM_ORE("magnesiumOre","BlockMagnesiumOre"),
+		NICKEL_ORE("nickelOre","BlockNickelOre"),
+		PLATINUM_ORE("platinumOre","BlockPlatinumOre"),
+		SILVER_ORE("silverOre","BlockSilverOre"),
+		TIN_ORE("tinOre","BlockTinOre"),
+		TITANIUM_ORE("titaniumOre","BlockTitaniumOre"),
+		TUNGSTEN_ORE("tungstenOre","BlockTungstenOre"),
+		URANIUM_ORE("uraniumOre","BlockUraniumOre"),
+		ZINC_ORE("zincOre","BlockZincOre");
 		
 		private String UnlocalizedName;
 		private String registryName;
