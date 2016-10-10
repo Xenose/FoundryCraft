@@ -24,6 +24,16 @@ public class FoundryBlocks
 		blockList[1] = new BlockCobaltOre(Material.ROCK, FoundryCraftBlocks.COBALT_ORE.getUnlocalizedName(), FoundryCraftBlocks.COBALT_ORE.getRegistryName(), 15F);
 		blockList[2] = new BlockCopperOre(Material.ROCK, FoundryCraftBlocks.COPPER_ORE.getUnlocalizedName(), FoundryCraftBlocks.COPPER_ORE.getRegistryName(), 15F);
 		blockList[3] = new BlockLeadOre(Material.ROCK, FoundryCraftBlocks.LEAD_ORE.getUnlocalizedName(), FoundryCraftBlocks.LEAD_ORE.getRegistryName(), 15F);
+		blockList[4] = new BlockLithiumOre(Material.ROCK, FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), 15F);
+		blockList[5] = new BlockMagnesiumOre(Material.ROCK, FoundryCraftBlocks.MAGNESIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.MAGNESIUM_ORE.getRegistryName(), 15F);
+		blockList[6] = new BlockNickelOre(Material.ROCK, FoundryCraftBlocks.NICKEL_ORE.getUnlocalizedName(), FoundryCraftBlocks.NICKEL_ORE.getRegistryName(), 15F);
+		blockList[7] = new BlockPlatinumOre(Material.ROCK, FoundryCraftBlocks.PLATINUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.PLATINUM_ORE.getRegistryName(), 15F);
+		blockList[8] = new BlockSilverOre(Material.ROCK, FoundryCraftBlocks.SILVER_ORE.getUnlocalizedName(), FoundryCraftBlocks.SILVER_ORE.getRegistryName(), 15F);
+		blockList[9] = new BlockTinOre(Material.ROCK, FoundryCraftBlocks.TIN_ORE.getUnlocalizedName(), FoundryCraftBlocks.TIN_ORE.getRegistryName(), 15F);
+		blockList[10] = new BlockTitaniumOre(Material.ROCK, FoundryCraftBlocks.TITANIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.TITANIUM_ORE.getRegistryName(), 15F);
+		blockList[11] = new BlockTungstenOre(Material.ROCK, FoundryCraftBlocks.TUNGSTEN_ORE.getUnlocalizedName(), FoundryCraftBlocks.TUNGSTEN_ORE.getRegistryName(), 15F);
+		blockList[12] = new BlockUraniumOre(Material.ROCK, FoundryCraftBlocks.URANIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.URANIUM_ORE.getRegistryName(), 15F);
+		blockList[13] = new BlockZincOre(Material.ROCK, FoundryCraftBlocks.ZINC_ORE.getUnlocalizedName(),FoundryCraftBlocks.ZINC_ORE.getRegistryName(), 15F);
 		
 		System.out.println("Number of blocks in FoundryBlocks init: " + blockList.length);
 	}
