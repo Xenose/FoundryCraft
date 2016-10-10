@@ -1,5 +1,6 @@
 package xenose.foundrycraft.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -17,7 +18,7 @@ import xenose.foundrycraft.blocks.ores.*;
 public class FoundryBlocks 
 {	
 	
-	public static FoundryBlock[] blockList = new FoundryBlock[1];
+	public static Block[] blockList = new Block[1];
 	
 	public static void init()
 	{
@@ -28,13 +29,16 @@ public class FoundryBlocks
 	
 	public static void register()
 	{
+		System.out.println("Loading in Blocks:");
+		
 		for (int i = 0; i < blockList.length; i++) 
 		{
+			System.out.println(blockList[i].getUnlocalizedName());
 			registerFoundryBlock(blockList[i]);
 		}
 	}
 	
-	private static void registerFoundryBlock(FoundryBlock block)
+	private static void registerFoundryBlock(Block block)
 	{
 		GameRegistry.register(block);
 		ItemBlock item = new ItemBlock(block);
@@ -50,9 +54,9 @@ public class FoundryBlocks
 		}
 	}
 	
-	private static void registerRender(FoundryBlock block)
+	private static void registerRender(Block block)
 	{
-		System.out.println(block.getRegistryName());
+		System.out.println("Registery name of current item: " + block.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 

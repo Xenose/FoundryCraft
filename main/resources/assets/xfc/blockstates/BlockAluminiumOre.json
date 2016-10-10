@@ -1,6 +1,4 @@
 {
-    "parent": "block/cube_all", 
-
     "variants": {
         "normal": { "model": "xfc:aluminiumOre" }
     }

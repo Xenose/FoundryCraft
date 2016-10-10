@@ -31,7 +31,7 @@ public class Refercence
 	
 	public static enum FoundryCraftBlocks
 	{	
-		ALUMINIUM_ORE("aluminiumOre","BlockAluminiumOre");
+		ALUMINIUM_ORE("aluminiumOre", "BlockAluminiumOre");
 		
 		
 		private String UnlocalizedName;
