@@ -3,7 +3,7 @@ package xenose.foundrycraft;
 public class Refercence 
 {
 	
-	public static final String MOD_ID = "";
+	public static final String MOD_ID = "xfc";
 	public static final String NAME = "Xenose's FoundryCraft Mod";
 	
 	public static final String VERSION = "1.0.A";
@@ -14,6 +14,8 @@ public class Refercence
 	
 	public static enum FoundryCraftItems
 	{	;
+		
+		
 		private String UnlocalizedName;
 		private String registryName;
 		
@@ -28,7 +30,10 @@ public class Refercence
 	}
 	
 	public static enum FoundryCraftBlocks
-	{	;
+	{	
+		ALUMINIUM_ORE("aluminiumOre","BlockAluminiumOre");
+		
+		
 		private String UnlocalizedName;
 		private String registryName;
 		

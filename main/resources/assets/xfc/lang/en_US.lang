@@ -1,0 +1,66 @@
+item.clearTool.name=Clear Tool(Debug)
+
+item.beer.name=Beer
+item.bluestone.name=Bluestone
+item.lapisLazuliDust.name=Lapis Lazulidust
+
+item.tungstenPickAxe.name=Tungsten Pickaxe
+item.tungstenHammer.name=Tungsten Hammer
+item.tungstenSword.name=Tungsten Sword
+item.tungstenAxe.name=Tungsten Axe
+item.tungstenHoe.name=Tungsten Hoe
+item.tungstenShovel.name=Tungsten Shovel
+
+item.aluminiumIngot.name=Aluminium Ingot
+item.cobaltIngot.name=Cobalt Ingot
+item.copperIngot.name=Copper Ingot
+item.leadIngot.name=Laed Ingot
+item.lithiumIngot.name=Lithium Ingot
+item.magnesiumIngot.name=Magnesium Ingot
+item.nickelIngot.name=Nickel Ingot
+item.platinumIngot.name=Platinum Ingot
+item.silverIngot.name=Silver Ingot
+item.tinIngot.name=Tin Ingot
+item.titaniumIngot.name=Titanium Ingot
+item.tungstenIngot.name=Tungsten Ingot
+item.uraniumIngot.name=Uranium Ingot
+item.zincIngot.name=Zinc Ingot
+
+tile.advancedCraftingTabel.name=Advanced CraftingTabel
+tile.powerFurnace.name=Bluestone Furnace
+tile.lamp.name=Lamp
+tile.pedestal.name=Pedestal
+tile.framedWool.name=Framed Wool
+tile.darkStoneBrick.name=Dark Stone Brick
+
+tile.aluminiumOre.name=Aluminium Ore
+tile.cobaltOre.name=Cobalt Ore
+tile.copperOre.name=Copper Ore
+tile.leadOre.name=Lead Ore
+tile.lithiumOre.name=Lithium Ore
+tile.magnesiumOre.name=Magnesium Ore
+tile.nickelOre.name=Nickel Ore
+tile.platinumOre.name=Platinum Ore
+tile.silverOre.name=Silver Ore
+tile.tinOre.name=Tin Ore
+tile.titaniumOre.name=Titanium Ore
+tile.tungstenOre.name=Tungsten Ore
+tile.uraniumOre.name=Urainum Ore
+tile.zinkOre.name=Zinc Ore
+
+tile.aluminiumBlock.name=Aluminium Block
+tile.cobaltBlock.name=Cobalt Block
+tile.copperBlock.name=Copper Block
+tile.leadBlock.name=Lead Block
+tile.lithiumBlock.name=Lithium Block
+tile.magnesiumBlock.name=Magnesium Block
+tile.nickelBlock.name=Nickel Block
+tile.platinumBlock.name=Platinum Block
+tile.silverBlock.name=Silver Block
+tile.tinBlock.name=Tin Block
+tile.titaniumBlock.name=Titanium Block
+tile.tungstenBlock.name=Tungsten Block
+tile.uraniumBlock.name=Urainum Block
+tile.zincBlock.name=Zinc Block
+
+itemGroup.tabDustPower=Dustpower

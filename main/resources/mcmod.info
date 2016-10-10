@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Dustpower",
+  "name": "Dustpower",
+  "description": "my first mode for testing. =P",
+  "version": "1.0.a",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Xenose"],
+  "credits": "Made by Xenose",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["mod_MinecraftForge"]
+}
+]
