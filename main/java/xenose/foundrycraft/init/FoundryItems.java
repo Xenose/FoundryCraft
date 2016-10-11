@@ -20,7 +20,7 @@ public class FoundryItems
 		copperIngot,
 		leadIngot,
 		lithiumIngot,
-		MagnesiumIngot,
+		magnesiumIngot,
 		nickelIngot,
 		platinumIngot,
 		silverIngot,
@@ -41,7 +41,7 @@ public class FoundryItems
 		copperDust,
 		leadDust,
 		lithiumDust,
-		MagnesiumDust,
+		magnesiumDust,
 		nickelDust,
 		platinumDust,
 		silverDust,
@@ -53,9 +53,92 @@ public class FoundryItems
 		
 		// other dusts
 		lapisLazuliDust,
-		bluestoneDust;
+		bluestoneDust,
+		
+		// Tools
+		aluminiumHammer,
+		aluminiumPickAxe,
+		aluminiumAxe,
+		aluminiumHoe,
+		aluminiumShovel,
+		
+		cobaltHammer,
+		cobaltPickAxe,
+		cobaltAxe,
+		cobaltHoe,
+		cobaltShovel,
+		
+		copperHammer,
+		copperPickAxe,
+		copperAxe,
+		copperHoe,
+		copperShovel,
+		
+		leadHammer,
+		leadPickAxe,
+		leadAxe,
+		leadHoe,
+		leadShovel,
+		
+		lithiumHammer,
+		lithiumPickAxe,
+		lithiumAxe,
+		lithiumHoe,
+		lithiumShovel,
+		
+		magnesiumHammer,
+		magnesiumPickAxe,
+		magnesiumAxe,
+		magnesiumHoe,
+		magnesiumShovel,
+		
+		nickelHammer,
+		nickelPickAxe,
+		nickelAxe,
+		nickelHoe,
+		nickelShovel,
+		
+		platinumHammer,
+		platinumPickAxe,
+		platinumAxe,
+		platinumHoe,
+		platinumShovel,
+		
+		silverHammmer,
+		silverPickAxe,
+		silverAxe,
+		silverHoe,
+		silverShovel,
+		
+		tinHammer,
+		tinPickAxe,
+		tinAxe,
+		tinHoe,
+		tinShovel,
 	
-	
+		titaniumHammer,
+		titaniumPickAxe,
+		titaniumAxe,
+		titaniumHoe,
+		titaniumShovel,
+		
+		tungstenHammer,
+		tungstenPickAxe,
+		tungstenAxe,
+		tungstenHoe,
+		tungstenShovel,
+		
+		uraniumHammer,
+		uraniumPickAxe,
+		uraniumAxe,
+		uraniumHoe,
+		uraniumShovel,
+		
+		zincHammer,
+		zincPickAxe,
+		zincAxe,
+		zincHoe,
+		zincShovel;
 	
 	public static Item[] itemList = new Item[FoundryCraftItems.values().length];
 	
