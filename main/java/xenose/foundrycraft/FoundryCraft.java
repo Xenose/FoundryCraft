@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import xenose.foundrycraft.init.FoundryBlocks;
+import xenose.foundrycraft.init.FoundryItems;
+import xenose.foundrycraft.items.baseitem.FoundryItem;
 import xenose.foundrycraft.proxy.CommonProxy;
 
 @Mod(modid = Refercence.MOD_ID, name = Refercence.NAME, version = Refercence.VERSION, acceptedMinecraftVersions = Refercence.ACCEPTED_VERSIONS)
@@ -30,6 +32,11 @@ public class FoundryCraft
 		FoundryBlocks.init();
 		System.out.println("Register FoundryBlocks");
 		FoundryBlocks.register();
+		
+		System.out.println("initializing FoundryItems");
+		FoundryItems.init();
+		System.out.println("Register FoundryItems");
+		FoundryItems.register();
 	}
 	
 	@EventHandler

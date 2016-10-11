@@ -15,7 +15,7 @@ public class FoundryTab extends CreativeTabs
 	@Override
 	public Item getTabIconItem() 
 	{
-		return Item.getItemFromBlock(FoundryBlocks.blockList[11]);
+		return Item.getItemFromBlock(FoundryBlocks.tungstenBlock);
 	}
 
 }

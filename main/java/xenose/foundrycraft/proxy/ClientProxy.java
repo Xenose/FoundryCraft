@@ -1,6 +1,7 @@
 package xenose.foundrycraft.proxy;
 
 import xenose.foundrycraft.init.FoundryBlocks;
+import xenose.foundrycraft.init.FoundryItems;
 
 public class ClientProxy implements CommonProxy
 {
@@ -9,6 +10,7 @@ public class ClientProxy implements CommonProxy
 	public void init() 
 	{
 		FoundryBlocks.registerRenders();
+		FoundryItems.registerRenders();
 	}
 
 }

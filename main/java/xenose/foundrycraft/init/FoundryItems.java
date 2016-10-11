@@ -1,11 +1,17 @@
 package xenose.foundrycraft.init;
 
+import java.util.Set;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import static xenose.foundrycraft.Refercence.FoundryCraftItems;
+
+import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.items.tools.*;
 
 public class FoundryItems
 {	
@@ -145,6 +151,7 @@ public class FoundryItems
 	public static void init()
 	{
 		itemIndex = 0;
+		tungstenHammer = itemList[itemIndex] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, (byte)3);
 		itemIndex = 0;
 		
 		System.out.println("Number of blocks in FoundryItems init: " + itemList.length);
