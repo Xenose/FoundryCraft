@@ -58,6 +58,7 @@ public class Refercence
 	
 	public static enum FoundryCraftItems
 	{	
+		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
 		TUNGSTEN_HAMMER("tungstenHammer","ItemTungstenHammer");
 		
 		private String UnlocalizedName;
