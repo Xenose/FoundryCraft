@@ -22,5 +22,7 @@ public class FoundryBlock extends Block
 	{
 		setUnlocalizedName(unlocalized);
 		setRegistryName(registry);
+		
+		setCreativeTab(Refercence.CREATIVE_TAB);
 	}
 }

@@ -20,11 +20,12 @@ public class FoundryBlocks
 	
 	public static void init()
 	{
+		// ores 
 		blockList[0] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);
 		blockList[1] = new BlockCobaltOre(Material.ROCK, FoundryCraftBlocks.COBALT_ORE.getUnlocalizedName(), FoundryCraftBlocks.COBALT_ORE.getRegistryName(), 15F);
 		blockList[2] = new BlockCopperOre(Material.ROCK, FoundryCraftBlocks.COPPER_ORE.getUnlocalizedName(), FoundryCraftBlocks.COPPER_ORE.getRegistryName(), 15F);
 		blockList[3] = new BlockLeadOre(Material.ROCK, FoundryCraftBlocks.LEAD_ORE.getUnlocalizedName(), FoundryCraftBlocks.LEAD_ORE.getRegistryName(), 15F);
-		blockList[4] = new BlockLithiumOre(Material.ROCK, FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), 15F);
+		blockList[4] = new BlockLithiumOre(Material.ROCK, FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.LITHIUM_ORE.getRegistryName(), 15F);
 		blockList[5] = new BlockMagnesiumOre(Material.ROCK, FoundryCraftBlocks.MAGNESIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.MAGNESIUM_ORE.getRegistryName(), 15F);
 		blockList[6] = new BlockNickelOre(Material.ROCK, FoundryCraftBlocks.NICKEL_ORE.getUnlocalizedName(), FoundryCraftBlocks.NICKEL_ORE.getRegistryName(), 15F);
 		blockList[7] = new BlockPlatinumOre(Material.ROCK, FoundryCraftBlocks.PLATINUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.PLATINUM_ORE.getRegistryName(), 15F);

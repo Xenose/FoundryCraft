@@ -1,5 +1,8 @@
 package xenose.foundrycraft;
 
+import net.minecraft.creativetab.CreativeTabs;
+import xenose.foundrycraft.FoundryTab;
+
 public class Refercence 
 {
 	
@@ -11,6 +14,8 @@ public class Refercence
 	
 	public static final String CLIENT_PROXY_CLASS = "xenose.foundrycraft.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "xenose.foundrycraft.proxy.ServerProxy";
+	
+	public static final CreativeTabs CREATIVE_TAB = new FoundryTab();
 	
 	public static enum FoundryCraftItems
 	{	;
