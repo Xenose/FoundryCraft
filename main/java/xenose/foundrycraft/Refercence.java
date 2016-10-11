@@ -49,7 +49,22 @@ public class Refercence
 		TITANIUM_ORE("titaniumOre","BlockTitaniumOre"),
 		TUNGSTEN_ORE("tungstenOre","BlockTungstenOre"),
 		URANIUM_ORE("uraniumOre","BlockUraniumOre"),
-		ZINC_ORE("zincOre","BlockZincOre");
+		ZINC_ORE("zincOre","BlockZincOre"),
+		
+		ALUMINIUM_BLOCK("aluminiumBlock","BlockAluminiumBlock"),
+		COBALT_BLOCK("cobaltBlock","BlockCobaltBlock"),
+		COPPER_BLOCK("copperBlock","BlockCopperBlock"),
+		LEAD_BLOCK("leadBlock","BlockLeadBlock"),
+		LITHIUM_BLOCK("lithiumBlock","BlockLithiumBlock"),
+		MAGNESIUM_BLOCK("magnesiumBlock","BlockMagnesiumBlock"),
+		NICKEL_BLOCK("nickelBlock","BlockNickelBlock"),
+		PLATINUM_BLOCK("platinumBlock","BlockPlatinumBlock"),
+		SILVER_BLOCK("silverBlock","BlockSilverBlock"),
+		TIN_BLOCK("tinBlock","BlockTinBlock"),
+		TITANIUM_BLOCK("titaniumBlock","BlockTitaniumBlock"),
+		TUNGSTEN_BLOCK("tungstenBlock","BlockTungstenBlock"),
+		URANIUM_BLOCK("uraniumBlock","BlockUraniumBlock"),
+		ZINC_BLOCK("zincBlock","BlockZincBlock");
 		
 		private String UnlocalizedName;
 		private String registryName;
