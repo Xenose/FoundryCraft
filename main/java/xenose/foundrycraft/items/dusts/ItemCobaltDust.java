@@ -1,5 +1,14 @@
 package xenose.foundrycraft.items.dusts;
 
-public class ItemCobaltDust {
+import xenose.foundrycraft.items.baseitem.FoundryItem;
+
+public class ItemCobaltDust extends FoundryItem 
+{
+
+	public ItemCobaltDust(String unlocalizedName, String registryName) 
+	{
+		super(unlocalizedName, registryName);
+		setunlocalizedAndRegistryName(unlocalizedName, registryName);	
+	}
 
 }
