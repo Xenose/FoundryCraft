@@ -27,11 +27,22 @@ public class Refercence
 	
 	public static final Set<Block> HAMMER_EFFECTIVE_ON = Sets.newHashSet(new Block[] 
 			{
-					Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, 
-					Blocks.DOUBLE_STONE_SLAB, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, 
-					Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE,
-					Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB
+						Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, 
+						Blocks.DOUBLE_STONE_SLAB, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, 
+						Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE,
+						Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB
+					}),
+			
+			PICKAXE_EFFECTIVE_ON = Sets.newHashSet(new Block[] 
+					{
+						Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, 
+						Blocks.DOUBLE_STONE_SLAB, Blocks.GOLDEN_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, 
+						Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE, 
+						Blocks.RAIL, Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB, Blocks.STONE_BUTTON, 
+						Blocks.STONE_PRESSURE_PLATE
 					});
+
+    
 	
 	//IRON(2, 250, 6.0F, 2.0F, 14), 			mining levels in use 1 2 3 4 5 6 . 8 . 10 . 12 
 	//EnumHelper.addToolMaterial(				name, harvestLevel, maxUses, efficiency, damage, enchantability) 
@@ -59,6 +70,7 @@ public class Refercence
 	public static enum FoundryCraftItems
 	{	
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
+		ALUMINIUM_PICKAXE("aluminiumPickaxe","ItemAluminiumPickaxe"),
 		TUNGSTEN_HAMMER("tungstenHammer","ItemTungstenHammer");
 		
 		private String UnlocalizedName;

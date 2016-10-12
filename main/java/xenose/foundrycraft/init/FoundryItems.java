@@ -63,85 +63,85 @@ public class FoundryItems
 		
 		// Tools
 		aluminiumHammer,
-		aluminiumPickAxe,
+		aluminiumPickaxe,
 		aluminiumAxe,
 		aluminiumHoe,
 		aluminiumShovel,
 		
 		cobaltHammer,
-		cobaltPickAxe,
+		cobaltPickaxe,
 		cobaltAxe,
 		cobaltHoe,
 		cobaltShovel,
 		
 		copperHammer,
-		copperPickAxe,
+		copperPickaxe,
 		copperAxe,
 		copperHoe,
 		copperShovel,
 		
 		leadHammer,
-		leadPickAxe,
+		leadPickaxe,
 		leadAxe,
 		leadHoe,
 		leadShovel,
 		
 		lithiumHammer,
-		lithiumPickAxe,
+		lithiumPickaxe,
 		lithiumAxe,
 		lithiumHoe,
 		lithiumShovel,
 		
 		magnesiumHammer,
-		magnesiumPickAxe,
+		magnesiumPickaxe,
 		magnesiumAxe,
 		magnesiumHoe,
 		magnesiumShovel,
 		
 		nickelHammer,
-		nickelPickAxe,
+		nickelPickaxe,
 		nickelAxe,
 		nickelHoe,
 		nickelShovel,
 		
 		platinumHammer,
-		platinumPickAxe,
+		platinumPickaxe,
 		platinumAxe,
 		platinumHoe,
 		platinumShovel,
 		
 		silverHammmer,
-		silverPickAxe,
+		silverPickaxe,
 		silverAxe,
 		silverHoe,
 		silverShovel,
 		
 		tinHammer,
-		tinPickAxe,
+		tinPickaxe,
 		tinAxe,
 		tinHoe,
 		tinShovel,
 	
 		titaniumHammer,
-		titaniumPickAxe,
+		titaniumPickaxe,
 		titaniumAxe,
 		titaniumHoe,
 		titaniumShovel,
 		
 		tungstenHammer,
-		tungstenPickAxe,
+		tungstenPickaxe,
 		tungstenAxe,
 		tungstenHoe,
 		tungstenShovel,
 		
 		uraniumHammer,
-		uraniumPickAxe,
+		uraniumPickaxe,
 		uraniumAxe,
 		uraniumHoe,
 		uraniumShovel,
 		
 		zincHammer,
-		zincPickAxe,
+		zincPickaxe,
 		zincAxe,
 		zincHoe,
 		zincShovel;
@@ -152,6 +152,7 @@ public class FoundryItems
 	{
 		itemIndex = 0;
 		aluminiumHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.ALUMINIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HAMMER.getRegistryName(), 1F, 1F, Refercence.aluminium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		aluminiumPickaxe = itemList[itemIndex++] = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_PICKAXE.getRegistryName(), 1F, 1F, Refercence.aluminium, Refercence.PICKAXE_EFFECTIVE_ON);
 		tungstenHammer = itemList[itemIndex++] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		itemIndex = 0;
 		
