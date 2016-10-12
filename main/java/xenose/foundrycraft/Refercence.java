@@ -69,9 +69,103 @@ public class Refercence
 	
 	public static enum FoundryCraftItems
 	{	
+		ALUMINIUM_AXE("aluminiumHammer","ItemAluminiumHammerS"),
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
+		ALUMINIUM_HOE("aluminiumHoe","ItemAluminiumHoe"),
 		ALUMINIUM_PICKAXE("aluminiumPickaxe","ItemAluminiumPickaxe"),
-		TUNGSTEN_HAMMER("tungstenHammer","ItemTungstenHammer");
+		ALUMINIUM_SHOVEL("aluminiumShovel","ItemAluminiumShovel"),
+		ALUMINIUM_SWORD("aluminiumSword","ItemAluminiumSword"),
+		
+		COBALT_AXE("cobaltAxe","ItemCobaltAxe"),
+		COBALT_HAMMER("cobaltHammer","ItemCobaltHammer"),
+		COBALT_HOE("cobaltHoe","ItemCobaltHoe"),
+		COBALT_PICKAXE("cobaltPickaxe","ItemCobaltPickaxe"),
+		COBALT_SHOVEL("cobaltShovel","ItemCobaltShovel"),
+		COBALT_SWORD("cobaltSword","ItemCobaltSword"),
+		
+		COPPER_AXE("copperAxe","ItemCopperAxe"),
+		COPPER_HAMMER("copperHammer","ItemCopperHammer"),
+		COPPER_HOE("copperHoe","ItemCopperHoe"),
+		COPPER_PICKAXE("copperPickaxe","ItemCopperPickaxe"),
+		COPPER_SHOVEL("copperShovel","ItemCopperShovel"),
+		COPPER_SWORD("copperSword","ItemCopperSword"),
+		
+		LEAD_AXE("leadAxe","ItemLeadAxe"),
+		LEAD_HAMMER("leadHammer","ItemLeadHammer"),
+		LEAD_HOE("leadHoe","ItemLeadHoe"),
+		LEAD_PICKAXE("leadPickaxe","ItemLeadPickaxe"),
+		LEAD_SHOVEL("leadShovel","leadShovel"),
+		LEAD_SWORD("leadSword","ItemLeadSowrd"),
+		
+		LITHIUM_AXE("lithiumAxe","ItemLithiumAxe"),
+		LITHIUM_HAMMER("lithiumHammer","ItemLithiumHammer"),
+		LITHIUM_HOE("lithiumHoe","ItemLithiumHoe"),
+		LITHIUM_PICKAXE("lithiumPickaxe","ItemLithiumPickaxe"),
+		LITHIUM_SHOVEL("lithiumShovel","ItemLithiumShovel"),
+		LITHIUM_SWORD("lithiumSword","ItemLithiumSword"),
+		
+		MAGNESIUM_AXE("magneisumAxe","ItemMagnesiumAxe"),
+		MAGNESIUM_HAMMER("magnesiumHammer","ItemMagnesiumHammer"),
+		MAGNESIUM_HOE("magnesiumHoe","ItemMagnesiumHoe"),
+		MAGNESIUM_PICKAXE("magnesiumPickaxe","ItemMagnesiumPickAxe"),
+		MAGNESIUM_SHOVEL("magnesiumShovel","ItemMagnesiumShovel"),
+		MAGNESIUM_SWORD("magnesiumSword","ItemMagnesiumSword"),
+		
+		NICKEL_AXE("nickelAxe","ItemNickelAxe"),
+		NICKEL_HAMMER("nickelHammer","ItemNickelHammer"),
+		NICKEL_HOE("nickelHoe","ItemNickelHoe"),
+		NICKEL_PICKAXE("nickelPickaxe","ItemNickelPickaxe"),
+		NICKEL_SHOVEL("nickelShovel","ItemNickelShovel"),
+		NICKEL_SWORD("nickelSword","ItemNickelSword"),
+		
+		PLATINUM_AXE("platinumAxe","ItemPlatinumAxe"),
+		PLATINUM_HAMMER("platinumHammer","ItemPlatinumHammer"),
+		PLATINUM_HOE("platinumHoe","ItemPlatinumHoe"),
+		PLATINUM_PICKAXE("platinumPickaxe","ItemPlatinumPickaxe"),
+		PLATINUM_SHOVEL("platinumShovel","ItemPlatinumShovel"),
+		PLATINUM_SWORD("platinumSword","ItemPlatinumSword"),
+		
+		SILVER_AXE("silverAxe","ItemSilverAxe"),
+		SILVER_HAMMER("silverHammer","ItemSilverHammer"),
+		SILVER_HOE("silverHoe","ItemSilverHoe"),
+		SILVER_PICKAXE("silverPickaxe","ItemSilverPickaxe"),
+		SILVER_SHOVEL("silverShovel","ItemSilverShovel"),
+		SILVER_SWORD("silverSword","ItemSilverSword"),
+		
+		TIN_AXE("tinAxe","ItemTinAxe"),
+		TIN_HAMMER("tinHammer","ItemTinHammer"),
+		TIN_HOE("tinHoe","ItemTinHoe"),
+		TIN_PICLAXE("tinPickaxe","ItemTinPickAxe"),
+		TIN_SHOVEL("tinShovel","ItemTinShovel"),
+		TIN_SWORD("tinSword","ItemTinSword"),
+		
+		TITANIUM_AXE("titaniumAxe","ItemTitaniumAxe"),
+		TITANIUM_HAMMER("titaniumHammer","ItemTitaniumHammer"),
+		TITANIUM_HOE("titaniumHoe","ItemTitaniumHoe"),
+		TITANIUM_PICKAXE("titaniumPickaxe","ItemTitaniumPickaxe"),
+		TITANIUM_SHOVEL("titaniumShovel","ItemTitaniumShovel"),
+		TITANIUM_SWORD("titaniumSword","ItemTitaniumSword"),
+		
+		TUNGSTEN_AXE("tungstenAxe","ItemTungstenAxe"),
+		TUNGSTEN_HAMMER("tungstenHammer","ItemTungstenHammer"),
+		TUNGSTEN_HOE("tungstenHoe","ItemTungstenHoe"),
+		TUNGSTEN_PICKAXE("tungstenPickaxe","ItemTungstenPickaxe"),
+		TUNGSTEN_SHOVEL("tungstenShovel","ItemTungstenShovel"),
+		TUNGSTEN_SWORD("tungstenSword","ItemTungstenSword"),
+		
+		URANIUM_AXE("uraniumAxe","ItemUraniumAxe"),
+		URANIUM_HAMMER("uraniumHammer","ItemUraniumHammer"),
+		URANIUM_HOE("uraniumHoe","ItmeUraniumHoe"),
+		URANIUM_PICKAXE("uraniumPickaxe","ItemUraniumPickaxe"),
+		URANIUM_SHOVEL("uraniumShovel","ItemUraniumShovel"),
+		URANIUM_SWORD("uraniumSword","ItemUraniumSword"),
+		
+		ZINC_AXE("zincAxe","ItemZincAxe"),
+		ZINC_HAMMER("zincHammer","ItemZincHammer"),
+		ZINC_HOE("zincHoe","ItemZincHoe"),
+		ZIN_PICKAXE("zincPickaxe","ItemZincPickaxe"),
+		ZINC_SHOVEL("zincShovel","ItemZincShovel"),
+		ZINC_SWORD("zincSword","ItemZincSword");
 		
 		private String UnlocalizedName;
 		private String registryName;
