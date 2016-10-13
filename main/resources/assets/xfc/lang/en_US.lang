@@ -4,7 +4,21 @@ item.beer.name=Beer
 item.bluestone.name=Bluestone
 item.lapisLazuliDust.name=Lapis Lazulidust
 
-item.tungstenPickAxe.name=Tungsten Pickaxe
+item.aluminiumPickaxe.name=Aluminium Pickaxe
+item.cobaltPickaxe.name=Cobalt Pickaxe
+item.copperPickaxe.name=Copper Pickaxe
+item.leadPickaxe.name=Lead Pickaxe
+item.lithiumPickaxe.name=Lithium Pickaxe
+item.magnesiumPickaxe.name=Magnesium Pickaxe
+item.nickelPickaxe.name=Nickel Pickaxe
+item.platinumPickaxe.name=Platinum Pickaxe
+item.silverPickaxe.name=Silver Pickaxe
+item.tinPickaxe.name=Tin Pickaxe
+item.titaniumPickaxe.name=Titanium Pickaxe
+item.tungstenPickaxe.name=Tungsten Pickaxe
+item.uraniumPickaxe.name=Uranium Pickaxe
+item.zincPickaxe.name=Zinc Pickaxe
+
 item.tungstenHammer.name=Tungsten Hammer
 item.tungstenSword.name=Tungsten Sword
 item.tungstenAxe.name=Tungsten Axe
