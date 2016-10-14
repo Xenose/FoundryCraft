@@ -40,6 +40,21 @@ item.tungstenAxe.name=Tungsten Axe
 item.tungstenHoe.name=Tungsten Hoe
 item.tungstenShovel.name=Tungsten Shovel
 
+item.aluminiumDust.name=Aluminium Dust
+item.cobaltDust.name=Cobalt Dust
+item.copperDust.name=Copper Dust
+item.leadDust.name=Laed Dust
+item.lithiumDust.name=Lithium Dust
+item.magnesiumDust.name=Magnesium Dust
+item.nickelDust.name=Nickel Dust
+item.platinumDust.name=Platinum Dust
+item.silverDust.name=Silver Dust
+item.tinDust.name=Tin Dust
+item.titaniumDust.name=Titanium Dust
+item.tungstenDust.name=Tungsten Dust
+item.uraniumDust.name=Uranium Dust
+item.zincDust.name=Zinc Dust
+
 item.aluminiumIngot.name=Aluminium Ingot
 item.cobaltIngot.name=Cobalt Ingot
 item.copperIngot.name=Copper Ingot
