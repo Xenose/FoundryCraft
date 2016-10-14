@@ -184,7 +184,22 @@ public class Refercence
 		ZINC_HOE("zincHoe","ItemZincHoe"),
 		ZINC_PICKAXE("zincPickaxe","ItemZincPickaxe"),
 		ZINC_SHOVEL("zincShovel","ItemZincShovel"),
-		ZINC_SWORD("zincSword","ItemZincSword");
+		ZINC_SWORD("zincSword","ItemZincSword"),
+		
+		ALUMINIUM_INGOT("aluminiumIngot","ItemAluminiumIngot"),
+		COBALT_INGOT("cobaltIngot","ItemCobaltIngot"),
+		COPPER_INGOT("copperIngot","ItemCopperIngot"),
+		LEAD_INGOT("leadIngot","ItemLeadIngot"),
+		LITHIUM_INGOT("lithiumIngot","ItemLithiumIngot"),
+		MAGNESIUM_INGOT("magnesiumIngot","ItemMagnesiumIngot"),
+		NICKEL_INGOT("nickelIngot","ItemNickelIngot"),
+		PLATINUM_INGOT("platinumIngot","ItemPlatinumIngot"),
+		SILVER_INGOT("silverIngot","ItemSilverIngot"),
+		TIN_INGOT("tinIngot","ItemTinIngot"),
+		TITANIUM_INGOT("titaniumIngot","ItemTitaniumIngot"),
+		TUNGSTEN_INGOT("tungstenIngot","ItemTungstenIngot"),
+		URANIUM_INGOT("uraniumIngot","ItemUraniumIngot"),
+		ZINC_INGOT("zincIngot","ItemZincIngot");
 		
 		private String UnlocalizedName;
 		private String registryName;
