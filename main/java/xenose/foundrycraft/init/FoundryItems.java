@@ -2,6 +2,8 @@ package xenose.foundrycraft.init;
 
 import java.util.Set;
 
+import org.apache.http.client.ConnectionBackoffStrategy;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -168,6 +170,21 @@ public class FoundryItems
 		tungstenPickaxe = itemList[itemIndex++] = new ItemTungstenPickaxe(FoundryCraftItems.TUNGSTEN_PICKAXE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_PICKAXE.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.PICKAXE_EFFECTIVE_ON);
 		uraniumPickaxe = itemList[itemIndex++] = new ItemUraniumPickaxe(FoundryCraftItems.URANIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.URANIUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.PICKAXE_EFFECTIVE_ON);
 		zincPickaxe = itemList[itemIndex++] = new ItemZincPickaxe(FoundryCraftItems.ZINC_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ZINC_PICKAXE.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.PICKAXE_EFFECTIVE_ON);
+		
+		aluminiumShovel = itemList[itemIndex++] = new ItemAluminiumShovel(FoundryCraftItems.ALUMINIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.aluminium, Refercence.SHOVEL_EFFECTIVE_ON);
+		cobaltShovel = itemList[itemIndex++] = new ItemCobaltShovel(FoundryCraftItems.COBALT_SHOVEL.getUnlocalizedName(), FoundryCraftItems.COBALT_SHOVEL.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.SHOVEL_EFFECTIVE_ON);
+		copperShovel = itemList[itemIndex++] = new ItemCopperShovel(FoundryCraftItems.COPPER_SHOVEL.getUnlocalizedName(), FoundryCraftItems.COPPER_SHOVEL.getRegistryName(), 2F, 2F, Refercence.copper, Refercence.SHOVEL_EFFECTIVE_ON);
+		leadShovel = itemList[itemIndex++] = new ItemLeadShovel(FoundryCraftItems.LEAD_SHOVEL.getUnlocalizedName(), FoundryCraftItems.LEAD_SHOVEL.getRegistryName(), 2F, 2F, Refercence.lead, Refercence.SHOVEL_EFFECTIVE_ON);
+		lithiumShovel = itemList[itemIndex++] = new ItemLithiumShovel(FoundryCraftItems.LITHIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.LITHIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.SHOVEL_EFFECTIVE_ON);
+		magnesiumShovel = itemList[itemIndex++] = new ItemMagnesiumShovel(FoundryCraftItems.MAGNESIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.SHOVEL_EFFECTIVE_ON);
+		nickelShovel = itemList[itemIndex++] = new ItemNickelShovel(FoundryCraftItems.NICKEL_SHOVEL.getUnlocalizedName(), FoundryCraftItems.NICKEL_SHOVEL.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.SHOVEL_EFFECTIVE_ON);
+		platinumShovel = itemList[itemIndex++] = new ItemPlatinumShovel(FoundryCraftItems.PLATINUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.PLATINUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.SHOVEL_EFFECTIVE_ON);
+		silverShovel = itemList[itemIndex++] = new ItemSilverShovel(FoundryCraftItems.SILVER_SHOVEL.getUnlocalizedName(), FoundryCraftItems.SILVER_SHOVEL.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.SHOVEL_EFFECTIVE_ON);
+		tinShovel = itemList[itemIndex++] = new ItemSilverShovel(FoundryCraftItems.TIN_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TIN_SHOVEL.getRegistryName(), 2F, 2F, Refercence.tin, Refercence.SHOVEL_EFFECTIVE_ON);
+		titaniumShovel = itemList[itemIndex++] = new ItemTitaniumShovel(FoundryCraftItems.TITANIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TITANIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.SHOVEL_EFFECTIVE_ON);
+		tungstenShovel = itemList[itemIndex++] = new ItemTungstenShovel(FoundryCraftItems.TUNGSTEN_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_SHOVEL.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.SHOVEL_EFFECTIVE_ON);
+		uraniumShovel = itemList[itemIndex++] = new ItemUraniumShovel(FoundryCraftItems.URANIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.URANIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.SHOVEL_EFFECTIVE_ON);
+		zincShovel = itemList[itemIndex++] = new ItemZincShovel(FoundryCraftItems.ZINC_SHOVEL.getUnlocalizedName(), FoundryCraftItems.ZINC_SHOVEL.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.SHOVEL_EFFECTIVE_ON);
 		
 		itemIndex = 0;
 		

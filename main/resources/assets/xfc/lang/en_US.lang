@@ -19,6 +19,21 @@ item.tungstenPickaxe.name=Tungsten Pickaxe
 item.uraniumPickaxe.name=Uranium Pickaxe
 item.zincPickaxe.name=Zinc Pickaxe
 
+item.aluminiumShovel.name=Aluminium Shovel
+item.cobaltShovel.name=Cobalt Shovel
+item.copperShovel.name=Copper Shovel
+item.leadShovel.name=Lead Shovel
+item.lithiumShovel.name=Lithium Shovel
+item.magnesiumShovel.name=Magnesium Shovel
+item.nickelShovel.name=Nickel Shovel
+item.platinumShovel.name=Platinum Shovel
+item.silverShovel.name=Silver Shovel
+item.tinShovel.name=Tin Shovel
+item.titaniumShovel.name=Titanium Shovel
+item.tungstenShovel.name=Tungsten Shovel
+item.uraniumShovel.name=Uranium Shovel
+item.zincShovel.name=Zinc Shovel
+
 item.tungstenHammer.name=Tungsten Hammer
 item.tungstenSword.name=Tungsten Sword
 item.tungstenAxe.name=Tungsten Axe

@@ -52,7 +52,14 @@ public class Refercence
 					{
 						Blocks.CLAY, Blocks.DIRT, Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, Blocks.SNOW_LAYER, 
 						Blocks.SOUL_SAND, Blocks.GRASS_PATH
+					}),
+			
+			EFFECTIVE_ON = Sets.newHashSet(new Block[] 
+					{
+						Blocks.CLAY, Blocks.DIRT, Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, 
+						Blocks.SNOW_LAYER, Blocks.SOUL_SAND, Blocks.GRASS_PATH
 					});
+
 
     
 	
@@ -106,7 +113,7 @@ public class Refercence
 		LEAD_HAMMER("leadHammer","ItemLeadHammer"),
 		LEAD_HOE("leadHoe","ItemLeadHoe"),
 		LEAD_PICKAXE("leadPickaxe","ItemLeadPickaxe"),
-		LEAD_SHOVEL("leadShovel","leadShovel"),
+		LEAD_SHOVEL("leadShovel","ItemLeadShovel"),
 		LEAD_SWORD("leadSword","ItemLeadSowrd"),
 		
 		LITHIUM_AXE("lithiumAxe","ItemLithiumAxe"),

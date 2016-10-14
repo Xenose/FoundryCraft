@@ -1,5 +1,5 @@
 package xenose.foundrycraft.items.tools;
 
-public class ItemZinkSword {
+public class ItemZincSword {
 
 }
