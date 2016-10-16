@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.init.FoundryBlocks;
+import xenose.foundrycraft.init.FoundryDictionary;
 import xenose.foundrycraft.init.FoundryItems;
 import xenose.foundrycraft.init.FoundryWorldGen;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
@@ -52,8 +53,8 @@ public class FoundryCraft
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
-	{
-		
+	{	
+		FoundryDictionary.init();
 	}
 	
 
