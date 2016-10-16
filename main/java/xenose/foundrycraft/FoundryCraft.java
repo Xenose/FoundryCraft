@@ -7,7 +7,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import xenose.foundrycraft.gui.FoundryGUIHandler;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.init.FoundryDictionary;
 import xenose.foundrycraft.init.FoundryItems;
@@ -51,7 +53,9 @@ public class FoundryCraft
 		
 		System.out.println("initializing Common Proxy");
 		proxy.init();
+		
 		GameRegistry.registerWorldGenerator(new FoundryWorldGen(), 0);
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new FoundryGUIHandler());
 	}
 	
 	@EventHandler

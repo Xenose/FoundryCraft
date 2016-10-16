@@ -11,6 +11,7 @@ import xenose.foundrycraft.Refercence;
 import static xenose.foundrycraft.Refercence.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.blocks.metalblocks.*;
+import xenose.foundrycraft.blocks.misc.BlockBlackStoneBrick;
 import xenose.foundrycraft.blocks.ores.*;
 
 public class FoundryBlocks 
@@ -19,6 +20,8 @@ public class FoundryBlocks
 	private static int blockIndex;
 	
 	public static Block
+	
+		blackStoneBrick,
 	
 		aluminiumOre,
 		cobaltOre,
@@ -55,6 +58,8 @@ public class FoundryBlocks
 	public static void init()
 	{
 		blockIndex = 0;
+		
+		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
 		
 		// ores 
 		aluminiumOre 	= 	blockList[blockIndex++] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);

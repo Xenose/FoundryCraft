@@ -231,6 +231,8 @@ public class Refercence
 	
 	public static enum FoundryCraftBlocks
 	{	
+		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
+		
 		ALUMINIUM_ORE("aluminiumOre", "BlockAluminiumOre"),
 		COBALT_ORE("cobaltOre","BlockCobaltOre"),
 		COPPER_ORE("copperOre","BlockCopperOre"),
