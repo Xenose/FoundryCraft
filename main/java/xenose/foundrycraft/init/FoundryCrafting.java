@@ -7,9 +7,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class FoundryCrafting 
 {
-	
+	//mod.addRecipe("woodenBoots 1", 3, 2, ":woodPlank", "", ":woodPlank", ":woodPlank", "", ":woodPlank");	
 	public static void register()
 	{
+		
+		
 		/*///============================================================================================================================================================
 		///		Tungsten things
 		///============================================================================================================================================================

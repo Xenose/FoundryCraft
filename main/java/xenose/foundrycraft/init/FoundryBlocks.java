@@ -81,7 +81,7 @@ public class FoundryBlocks
 		magnesiumBlock 	= 	blockList[blockIndex++] = new BlockMagnesiumBlock(Material.IRON, FoundryCraftBlocks.MAGNESIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.MAGNESIUM_BLOCK.getRegistryName(), 15F);
 		nickelBlock 	= 	blockList[blockIndex++] = new BlockNickelBlock(Material.IRON, FoundryCraftBlocks.NICKEL_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.NICKEL_BLOCK.getRegistryName(), 15F);
 		platinumBlock 	= 	blockList[blockIndex++] = new BlockPlatinumBlock(Material.IRON, FoundryCraftBlocks.PLATINUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.PLATINUM_BLOCK.getRegistryName(), 15F);
-		silverOre 		= 	blockList[blockIndex++] = new BlockSilverBlock(Material.IRON, FoundryCraftBlocks.SILVER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.SILVER_BLOCK.getRegistryName(), 15F);
+		silverBlock 	= 	blockList[blockIndex++] = new BlockSilverBlock(Material.IRON, FoundryCraftBlocks.SILVER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.SILVER_BLOCK.getRegistryName(), 15F);
 		tinBlock 		= 	blockList[blockIndex++] = new BlockTinBlock(Material.IRON, FoundryCraftBlocks.TIN_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TIN_BLOCK.getRegistryName(), 15F);
 		titaniumBlock 	= 	blockList[blockIndex++] = new BlockTitaniumBlock(Material.IRON, FoundryCraftBlocks.TITANIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TITANIUM_BLOCK.getRegistryName(), 15F);
 		tungstenBlock 	=	blockList[blockIndex++] = new BlockTungstenBlock(Material.IRON, FoundryCraftBlocks.TUNGSTEN_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TUNGSTEN_BLOCK.getRegistryName(), 15F);
