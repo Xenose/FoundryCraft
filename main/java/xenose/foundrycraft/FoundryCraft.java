@@ -1,6 +1,5 @@
 package xenose.foundrycraft;
 
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.init.FoundryDictionary;
 import xenose.foundrycraft.init.FoundryItems;
+import xenose.foundrycraft.init.FoundrySmelting;
 import xenose.foundrycraft.init.FoundryWorldGen;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 import xenose.foundrycraft.proxy.CommonProxy;
@@ -46,6 +46,9 @@ public class FoundryCraft
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		FoundryDictionary.init();
+		FoundrySmelting.init();
+		
 		System.out.println("initializing Common Proxy");
 		proxy.init();
 		GameRegistry.registerWorldGenerator(new FoundryWorldGen(), 0);
@@ -54,7 +57,6 @@ public class FoundryCraft
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{	
-		FoundryDictionary.init();
 	}
 	
 
