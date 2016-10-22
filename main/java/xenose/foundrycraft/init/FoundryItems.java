@@ -18,6 +18,12 @@ import xenose.foundrycraft.Refercence;
 import xenose.foundrycraft.items.ingots.*;
 import xenose.foundrycraft.items.dusts.*;
 import xenose.foundrycraft.items.tools.*;
+import xenose.foundrycraft.items.tools.axe.*;
+import xenose.foundrycraft.items.tools.hammer.*;
+import xenose.foundrycraft.items.tools.hoe.*;
+import xenose.foundrycraft.items.tools.pickaxe.*;
+import xenose.foundrycraft.items.tools.shovel.*;
+import xenose.foundrycraft.items.tools.sword.*;
 
 public class FoundryItems
 {	
@@ -224,6 +230,7 @@ public class FoundryItems
 		
 		System.out.println("Number of items in FoundryItems init: " + itemList.length);
 	}
+	
 	
 	public static void register()
 	{

@@ -25,4 +25,14 @@ public class FoundryBlock extends Block
 		
 		setCreativeTab(Refercence.CREATIVE_TAB);
 	}
+	
+	public boolean hasCustomModel()
+	{
+		return false;
+	}
+	
+	public void loadCustomModel()
+	{
+		
+	}
 }

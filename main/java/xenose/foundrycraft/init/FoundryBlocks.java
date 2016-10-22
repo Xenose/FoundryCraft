@@ -10,8 +10,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.Refercence;
 import static xenose.foundrycraft.Refercence.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
+import xenose.foundrycraft.blocks.chest.*;
 import xenose.foundrycraft.blocks.metalblocks.*;
-import xenose.foundrycraft.blocks.misc.BlockBlackStoneBrick;
+import xenose.foundrycraft.blocks.misc.*;
 import xenose.foundrycraft.blocks.ores.*;
 
 public class FoundryBlocks 
@@ -19,7 +20,9 @@ public class FoundryBlocks
 	
 	private static int blockIndex;
 	
-	public static Block
+	public static FoundryBlock
+	
+		test2con,
 	
 		blackStoneBrick,
 	
@@ -53,11 +56,13 @@ public class FoundryBlocks
 		uraniumBlock,
 		zincBlock;
 	
-	public static Block[] blockList = new Block[FoundryCraftBlocks.values().length];
+	public static FoundryBlock[] blockList = new FoundryBlock[FoundryCraftBlocks.values().length];
 	
 	public static void init()
 	{
 		blockIndex = 0;
+		
+		test2con		= 	blockList[blockIndex++] = new Test2Con(Material.IRON, FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getRegistryName(), 1, 1);
 		
 		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
 		
@@ -125,7 +130,9 @@ public class FoundryBlocks
 		for (int i = 0; i < blockList.length; i++) 
 		{
 			if(blockList[i] != null)
-				registerRender(blockList[i]);
+				if (!blockList[i].hasCustomModel())
+					registerRender(blockList[i]);
+				else blockList[i].loadCustomModel();
 		}
 	}
 	
