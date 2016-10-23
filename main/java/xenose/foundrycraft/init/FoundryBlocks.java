@@ -62,7 +62,7 @@ public class FoundryBlocks
 	{
 		blockIndex = 0;
 		
-		test2con		= 	blockList[blockIndex++] = new Test2Con(Material.IRON, FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getRegistryName(), 1, 1);
+		//test2con		= 	blockList[blockIndex++] = new Test2Con(Material.IRON, FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TEST_CONTAINER_BLOCK.getRegistryName(), 1, 1);
 		
 		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
 		

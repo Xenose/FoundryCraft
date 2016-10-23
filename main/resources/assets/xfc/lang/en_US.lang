@@ -4,6 +4,21 @@ item.beer.name=Beer
 item.bluestone.name=Bluestone
 item.lapisLazuliDust.name=Lapis Lazulidust
 
+item.aluminiumHammer.name=Aluminium Hammer
+item.cobaltHammer.name=Cobalt Hammer
+item.copperHammer.name=Copper Hammer
+item.leadHammer.name=Lead Hammer
+item.lithiumHammer.name=Lithium Hammer
+item.magnesiumHammer.name=Magnesium Hammer
+item.nickelHammer.name=Nickel Hammer
+item.platinumHammer.name=Platinum Hammer
+item.silverHammer.name=Silver Hammer
+item.tinHammer.name=Tin Hammer
+item.titaniumHammer.name=Titanium Hammer
+item.tungstenHammer.name=Tungsten Hammer
+item.uraniumHammer.name=Uranium Hammer
+item.zincHammer.name=Zinc Hammer
+
 item.aluminiumPickaxe.name=Aluminium Pickaxe
 item.cobaltPickaxe.name=Cobalt Pickaxe
 item.copperPickaxe.name=Copper Pickaxe
@@ -33,12 +48,6 @@ item.titaniumShovel.name=Titanium Shovel
 item.tungstenShovel.name=Tungsten Shovel
 item.uraniumShovel.name=Uranium Shovel
 item.zincShovel.name=Zinc Shovel
-
-item.tungstenHammer.name=Tungsten Hammer
-item.tungstenSword.name=Tungsten Sword
-item.tungstenAxe.name=Tungsten Axe
-item.tungstenHoe.name=Tungsten Hoe
-item.tungstenShovel.name=Tungsten Shovel
 
 item.aluminiumDust.name=Aluminium Dust
 item.cobaltDust.name=Cobalt Dust
@@ -107,4 +116,5 @@ tile.tungstenBlock.name=Tungsten Block
 tile.uraniumBlock.name=Urainum Block
 tile.zincBlock.name=Zinc Block
 
-itemGroup.tabDustPower=Dustpower
+itemGroup.tabFoundryTab=FoundryCraft
+itemGroup.tabFoundryTools=FoundryCraft Tools

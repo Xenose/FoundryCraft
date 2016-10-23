@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import scala.collection.Searching.Found;
+import scala.tools.ant.sabbus.CompilationPathProperty;
 
 import static xenose.foundrycraft.Refercence.FoundryCraftItems;
 
@@ -163,8 +164,6 @@ public class FoundryItems
 	public static void init()
 	{
 		itemIndex = 0;
-		//aluminiumHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.ALUMINIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HAMMER.getRegistryName(), 1F, 1F, Refercence.aluminium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		tungstenHammer = itemList[itemIndex++] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		
 		aluminiumDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.ALUMINIUM_DUST.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_DUST.getRegistryName());
 		cobaltDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.COBALT_DUST.getUnlocalizedName(), FoundryCraftItems.COBALT_DUST.getRegistryName());
@@ -195,6 +194,21 @@ public class FoundryItems
 		tungstenIngot = itemList[itemIndex++] = new ItemTungstenIngot(FoundryCraftItems.TUNGSTEN_INGOT.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_INGOT.getRegistryName());
 		uraniumIngot = itemList[itemIndex++] = new ItemUraniumIngot(FoundryCraftItems.URANIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.TITANIUM_INGOT.getRegistryName());
 		zincIngot = itemList[itemIndex++] = new ItemZincIngot(FoundryCraftItems.ZINC_INGOT.getUnlocalizedName(), FoundryCraftItems.ZINC_INGOT.getRegistryName());
+		
+		aluminiumHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.ALUMINIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HAMMER.getRegistryName(), 2F, 3F, Refercence.aluminium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		cobaltHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.COBALT_HAMMER.getUnlocalizedName(), FoundryCraftItems.COBALT_HAMMER.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		copperHammer = itemList[itemIndex++] = new ItemCopperHammer(FoundryCraftItems.COPPER_HAMMER.getUnlocalizedName(), FoundryCraftItems.COPPER_HAMMER.getRegistryName(), 2F, 2F, Refercence.copper, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		leadHammer = itemList[itemIndex++] = new ItemLeadHammer(FoundryCraftItems.LEAD_HAMMER.getUnlocalizedName(), FoundryCraftItems.LEAD_HAMMER.getRegistryName(), 2F, 1F, Refercence.lead, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		lithiumHammer = itemList[itemIndex++] = new ItemLithiumHammer(FoundryCraftItems.LITHIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.LITHIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		magnesiumHammer = itemList[itemIndex++] = new ItemMagnesiumHammer(FoundryCraftItems.MAGNESIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		nickelHammer = itemList[itemIndex++] = new ItemNickelHammer(FoundryCraftItems.NICKEL_HAMMER.getUnlocalizedName(), FoundryCraftItems.NICKEL_HAMMER.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.HAMMER_EFFECTIVE_ON,	 3);
+		platinumHammer = itemList[itemIndex++] = new ItemPlatinumHammer(FoundryCraftItems.PLATINUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.PLATINUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		silverHammmer = itemList[itemIndex++] = new ItemSilverHammer(FoundryCraftItems.SILVER_HAMMER.getUnlocalizedName(), FoundryCraftItems.SILVER_HAMMER.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		tinHammer = itemList[itemIndex++] = new ItemTinHammer(FoundryCraftItems.TIN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TIN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tin, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		titaniumHammer = itemList[itemIndex++] = new ItemTitaniumHammer(FoundryCraftItems.TITANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.TITANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		tungstenHammer = itemList[itemIndex++] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		uraniumHammer = itemList[itemIndex++] = new ItemUraniumHammer(FoundryCraftItems.URANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.URANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		zincHammer = itemList[itemIndex++] = new ItemZincHammer(FoundryCraftItems.ZINC_HAMMER.getUnlocalizedName(), FoundryCraftItems.ZINC_HAMMER.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		
 		aluminiumPickaxe = itemList[itemIndex++] = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_PICKAXE.getRegistryName(), 1F, 5F, Refercence.aluminium, Refercence.PICKAXE_EFFECTIVE_ON);
 		cobaltPickaxe = itemList[itemIndex++] = new ItemCobaltPickaxe(FoundryCraftItems.COBALT_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COBALT_PICKAXE.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.PICKAXE_EFFECTIVE_ON);

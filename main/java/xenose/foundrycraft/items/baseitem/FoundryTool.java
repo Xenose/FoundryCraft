@@ -15,7 +15,7 @@ public class FoundryTool extends ItemTool
 	public FoundryTool(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
 		super(attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
-		setCreativeTab(Refercence.CREATIVE_TAB);
+		setCreativeTab(Refercence.CREATIVE_TAB_TOOLS);
 	}
 	
 	public void setunlocalizedAndRegistryName(String unlocalizedName,String registryName)

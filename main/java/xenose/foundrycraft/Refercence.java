@@ -23,7 +23,9 @@ public class Refercence
 	public static final String CLIENT_PROXY_CLASS = "xenose.foundrycraft.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "xenose.foundrycraft.proxy.ServerProxy";
 	
-	public static final CreativeTabs CREATIVE_TAB = new FoundryTab();
+	public static final CreativeTabs 
+		CREATIVE_TAB = new FoundryTab("tabFoundryTab", 0),
+		CREATIVE_TAB_TOOLS = new FoundryTab("tabFoundryTools", 1);
 	
 	public static final Set<Block> HAMMER_EFFECTIVE_ON = Sets.newHashSet(new Block[] 
 			{
