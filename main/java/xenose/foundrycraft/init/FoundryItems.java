@@ -17,6 +17,7 @@ import static xenose.foundrycraft.Refercence.FoundryCraftItems;
 
 import xenose.foundrycraft.Refercence;
 import xenose.foundrycraft.items.ingots.*;
+import xenose.foundrycraft.items.misc.ItemWetDarkStoneBrick;
 import xenose.foundrycraft.items.dusts.*;
 import xenose.foundrycraft.items.tools.*;
 import xenose.foundrycraft.items.tools.axe.*;
@@ -32,6 +33,11 @@ public class FoundryItems
 	private static int itemIndex;
 	
 	public static Item 
+	
+		// other dusts
+		lapisLazuliDust,
+		bluestoneDust,
+		wetDarkStoneBrick,
 	
 		// ingots
 		aluminiumIngot,
@@ -69,10 +75,6 @@ public class FoundryItems
 		tungstenDust,
 		uraniumDust,
 		zincDust,
-		
-		// other dusts
-		lapisLazuliDust,
-		bluestoneDust,
 		
 		// Tools
 		aluminiumHammer,
@@ -164,6 +166,8 @@ public class FoundryItems
 	public static void init()
 	{
 		itemIndex = 0;
+		
+		wetDarkStoneBrick = itemList[itemIndex++] = new ItemWetDarkStoneBrick(FoundryCraftItems.WET_DARK_STONE_BRICK.getUnlocalizedName(), FoundryCraftItems.WET_DARK_STONE_BRICK.getRegistryName());
 		
 		aluminiumDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.ALUMINIUM_DUST.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_DUST.getRegistryName());
 		cobaltDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.COBALT_DUST.getUnlocalizedName(), FoundryCraftItems.COBALT_DUST.getRegistryName());

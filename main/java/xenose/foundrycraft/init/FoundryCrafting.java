@@ -1,7 +1,11 @@
 package xenose.foundrycraft.init;
 
+import net.minecraft.block.BlockStone;
+import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
+import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -12,6 +16,7 @@ public class FoundryCrafting
 	public static void register()
 	{
 		
+		GameRegistry.addShapelessRecipe(new ItemStack(FoundryItems.wetDarkStoneBrick), Blocks.STONEBRICK, new ItemStack(Items.DYE,1,EnumDyeColor.BLACK.getDyeDamage()));
 		
 		/*///============================================================================================================================================================
 		///		Tungsten things

@@ -8,6 +8,8 @@ public class FoundrySmelting
 	
 	public static void init()
 	{
+		GameRegistry.addSmelting(FoundryItems.wetDarkStoneBrick, new ItemStack(FoundryBlocks.blackStoneBrick, 1), 0);
+		
 		GameRegistry.addSmelting(FoundryBlocks.aluminiumOre, new ItemStack(FoundryItems.aluminiumIngot, 1), 0);
 		GameRegistry.addSmelting(FoundryBlocks.cobaltOre, new ItemStack(FoundryItems.cobaltIngot, 1), 0);
 		GameRegistry.addSmelting(FoundryBlocks.copperOre, new ItemStack(FoundryItems.copperIngot, 1), 0);

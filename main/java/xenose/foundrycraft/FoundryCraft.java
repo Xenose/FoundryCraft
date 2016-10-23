@@ -10,7 +10,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import xenose.foundrycraft.Refercence.FoundryCraftItems;
 import xenose.foundrycraft.init.FoundryBlocks;
+import xenose.foundrycraft.init.FoundryCrafting;
 import xenose.foundrycraft.init.FoundryDictionary;
 import xenose.foundrycraft.init.FoundryItems;
 import xenose.foundrycraft.init.FoundrySmelting;
@@ -50,6 +52,7 @@ public class FoundryCraft
 	public void init(FMLInitializationEvent event)
 	{
 		FoundryDictionary.init();
+		FoundryCrafting.register();
 		FoundrySmelting.init();
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiProxy());

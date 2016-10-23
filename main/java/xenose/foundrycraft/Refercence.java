@@ -90,6 +90,8 @@ public class Refercence
 	
 	public static enum FoundryCraftItems
 	{	
+		WET_DARK_STONE_BRICK("wetDarkStoneBrick","ItemWetDarkStoneBrick"),
+		
 		ALUMINIUM_AXE("aluminiumHammer","ItemAluminiumHammerS"),
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
 		ALUMINIUM_HOE("aluminiumHoe","ItemAluminiumHoe"),
