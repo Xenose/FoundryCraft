@@ -1,6 +1,7 @@
 package xenose.foundrycraft;
 
 import net.minecraft.client.gui.Gui;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,6 +12,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.Refercence.FoundryCraftItems;
+import xenose.foundrycraft.eventhandler.FoundryEventHandler;
+import xenose.foundrycraft.init.FoundryBiomes;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.init.FoundryCrafting;
 import xenose.foundrycraft.init.FoundryDictionary;
@@ -34,6 +37,8 @@ public class FoundryCraft
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		MinecraftForge.EVENT_BUS.register(new FoundryEventHandler());
+		
 		System.out.println("Starting Xenose FoundryCraft Mod");
 		System.out.println("===================================================================================================================================================");
 		
@@ -61,6 +66,7 @@ public class FoundryCraft
 		proxy.init();
 		
 		GameRegistry.registerWorldGenerator(new FoundryWorldGen(), 0);
+		FoundryBiomes.register();
 	}
 	
 	@EventHandler

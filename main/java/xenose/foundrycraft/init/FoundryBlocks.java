@@ -1,11 +1,13 @@
 package xenose.foundrycraft.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import xenose.foundrycraft.Refercence;
 import static xenose.foundrycraft.Refercence.FoundryCraftBlocks;
@@ -25,6 +27,7 @@ public class FoundryBlocks
 		test2con,
 	
 		blackStoneBrick,
+		coloredPlanks,
 	
 		aluminiumOre,
 		cobaltOre,
@@ -63,6 +66,7 @@ public class FoundryBlocks
 		blockIndex = 0;
 		
 		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
+		coloredPlanks 	=	blockList[blockIndex++] = new BlockDyedPlanks(Material.WOOD, FoundryCraftBlocks.COLORED_PLANKS.getUnlocalizedName(), FoundryCraftBlocks.COLORED_PLANKS.getRegistryName(), 1F);
 		
 		// ores 
 		aluminiumOre 	= 	blockList[blockIndex++] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);
@@ -111,6 +115,11 @@ public class FoundryBlocks
 			{
 				System.out.println(blockList[i].getUnlocalizedName());
 				registerFoundryBlock(blockList[i]);
+				
+				/*if(blockList[blockIndex] instanceof BlockDyedPlanks)
+				{
+					Register BlockDyedPlanks = (BlockDyedPlanks) blockList[blockIndex];
+				}*/
 			}
 		}
 	}

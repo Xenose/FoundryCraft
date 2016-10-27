@@ -20,7 +20,6 @@ public class FoundryBiome extends Biome
 	{
 		this.topBlock = Blocks.ICE.getDefaultState();
 		this.fillerBlock = Blocks.SNOW.getDefaultState();
-		
 		this.generateBiomeTerrain(worldIn, rand, chunkPrimerIn, x, z, noiseVal);
 	}
 	

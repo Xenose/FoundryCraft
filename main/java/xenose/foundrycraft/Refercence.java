@@ -238,6 +238,7 @@ public class Refercence
 		TEST_CONTAINER_BLOCK("testContainerBlock","BlockTestContainerBlock"),
 		
 		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
+		COLORED_PLANKS("coloredPlanks","blockColoredPlanks"),
 		
 		ALUMINIUM_ORE("aluminiumOre", "BlockAluminiumOre"),
 		COBALT_ORE("cobaltOre","BlockCobaltOre"),
