@@ -92,7 +92,7 @@ public class Refercence
 	{	
 		WET_DARK_STONE_BRICK("wetDarkStoneBrick","ItemWetDarkStoneBrick"),
 		
-		ALUMINIUM_AXE("aluminiumHammer","ItemAluminiumHammerS"),
+		ALUMINIUM_AXE("aluminiumAxe","ItemAluminiumAxe"),
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
 		ALUMINIUM_HOE("aluminiumHoe","ItemAluminiumHoe"),
 		ALUMINIUM_PICKAXE("aluminiumPickaxe","ItemAluminiumPickaxe"),
@@ -238,6 +238,7 @@ public class Refercence
 		TEST_CONTAINER_BLOCK("testContainerBlock","BlockTestContainerBlock"),
 		
 		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
+		BLEEDING_OBSIDEN("bleedingObsiden","BlockBleedingObsiden"),
 		COLORED_PLANKS("coloredPlanks","blockColoredPlanks"),
 		
 		ALUMINIUM_ORE("aluminiumOre", "BlockAluminiumOre"),

@@ -10,6 +10,7 @@ public class BlockCobaltOre extends FoundryBlock
 	{
 		super(materialIn, unlocalizedName, registryName, hardness);
 		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
+		setHarvestLevel("pickaxe", 4);
 	}
 
 }

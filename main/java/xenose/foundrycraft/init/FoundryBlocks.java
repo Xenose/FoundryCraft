@@ -27,6 +27,7 @@ public class FoundryBlocks
 		test2con,
 	
 		blackStoneBrick,
+		bleedingObsiden,
 		coloredPlanks,
 	
 		aluminiumOre,
@@ -66,7 +67,8 @@ public class FoundryBlocks
 		blockIndex = 0;
 		
 		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
-		coloredPlanks 	=	blockList[blockIndex++] = new BlockDyedPlanks(Material.WOOD, FoundryCraftBlocks.COLORED_PLANKS.getUnlocalizedName(), FoundryCraftBlocks.COLORED_PLANKS.getRegistryName(), 1F);
+		bleedingObsiden =	blockList[blockIndex++] = new BlockBleedingObsiden(Material.ROCK, FoundryCraftBlocks.BLEEDING_OBSIDEN.getUnlocalizedName(), FoundryCraftBlocks.BLEEDING_OBSIDEN.getRegistryName(), 40F);
+		//coloredPlanks 	=	blockList[blockIndex++] = new BlockDyedPlanks(Material.WOOD, FoundryCraftBlocks.COLORED_PLANKS.getUnlocalizedName(), FoundryCraftBlocks.COLORED_PLANKS.getRegistryName(), 1F);
 		
 		// ores 
 		aluminiumOre 	= 	blockList[blockIndex++] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);

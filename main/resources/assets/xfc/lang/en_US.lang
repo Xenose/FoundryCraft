@@ -84,7 +84,9 @@ tile.powerFurnace.name=Bluestone Furnace
 tile.lamp.name=Lamp
 tile.pedestal.name=Pedestal
 tile.framedWool.name=Framed Wool
+
 tile.blackStoneBrick.name=Black Stone Brick
+tile.bleedingObsiden.name=Bleeding Obsiden
 
 tile.aluminiumOre.name=Aluminium Ore
 tile.cobaltOre.name=Cobalt Ore
