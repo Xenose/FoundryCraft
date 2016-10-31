@@ -4,6 +4,23 @@ item.beer.name=Beer
 item.bluestone.name=Bluestone
 item.lapisLazuliDust.name=Lapis Lazulidust
 
+item.shovelOfDire.name=Shovel of Dire
+
+item.aluminiumAxe.name=Aluminium Axe
+item.cobaltAxe.name=Cobalt Axe
+item.copperAxe.name=Copper Axe
+item.leadAxe.name=Lead Axe
+item.lithiumAxe.name=Lithium Axe
+item.magnesiumAxe.name=Magnesium Axe
+item.nickelAxe.name=Nickel Axe
+item.platinumAxe.name=Platinum Axe
+item.silverAxe.name=Silver Axe
+item.tinAxe.name=Tin Axe
+item.titaniumAxe.name=Titanium Axe
+item.tungstenAxe.name=Tungsten Axe
+item.uraniumAxe.name=Uranium Axe
+item.zincAxe.name=Zinc Axe
+
 item.aluminiumHammer.name=Aluminium Hammer
 item.cobaltHammer.name=Cobalt Hammer
 item.copperHammer.name=Copper Hammer

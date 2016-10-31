@@ -24,6 +24,7 @@ public class FoundryBlocks
 	
 	public static FoundryBlock
 	
+		virusBlock,
 		test2con,
 	
 		blackStoneBrick,
@@ -66,6 +67,7 @@ public class FoundryBlocks
 	{
 		blockIndex = 0;
 		
+		virusBlock		=	blockList[blockIndex++]	= new BlockVirusBlock(Material.CLOTH, FoundryCraftBlocks.VIRUS_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.VIRUS_BLOCK.getRegistryName(), 3F);
 		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
 		bleedingObsiden =	blockList[blockIndex++] = new BlockBleedingObsiden(Material.ROCK, FoundryCraftBlocks.BLEEDING_OBSIDEN.getUnlocalizedName(), FoundryCraftBlocks.BLEEDING_OBSIDEN.getRegistryName(), 40F);
 		//coloredPlanks 	=	blockList[blockIndex++] = new BlockDyedPlanks(Material.WOOD, FoundryCraftBlocks.COLORED_PLANKS.getUnlocalizedName(), FoundryCraftBlocks.COLORED_PLANKS.getRegistryName(), 1F);

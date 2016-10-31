@@ -21,6 +21,7 @@ import xenose.foundrycraft.items.misc.ItemWetDarkStoneBrick;
 import xenose.foundrycraft.items.dusts.*;
 import xenose.foundrycraft.items.tools.*;
 import xenose.foundrycraft.items.tools.axe.*;
+import xenose.foundrycraft.items.tools.debug.ItemShovelOfDire;
 import xenose.foundrycraft.items.tools.hammer.*;
 import xenose.foundrycraft.items.tools.hoe.*;
 import xenose.foundrycraft.items.tools.pickaxe.*;
@@ -77,6 +78,8 @@ public class FoundryItems
 		zincDust,
 		
 		// Tools
+		shovelOfDire,
+		
 		aluminiumHammer,
 		aluminiumPickaxe,
 		aluminiumAxe,
@@ -168,6 +171,7 @@ public class FoundryItems
 		itemIndex = 0;
 		
 		wetDarkStoneBrick = itemList[itemIndex++] = new ItemWetDarkStoneBrick(FoundryCraftItems.WET_DARK_STONE_BRICK.getUnlocalizedName(), FoundryCraftItems.WET_DARK_STONE_BRICK.getRegistryName());
+		shovelOfDire = itemList[itemIndex++] = new ItemShovelOfDire(FoundryCraftItems.SHOVEL_OF_DIRE.getUnlocalizedName(), FoundryCraftItems.SHOVEL_OF_DIRE.getRegistryName(), 10, 10, Refercence.debug, Refercence.HAMMER_EFFECTIVE_ON);
 		
 		aluminiumDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.ALUMINIUM_DUST.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_DUST.getRegistryName());
 		cobaltDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.COBALT_DUST.getUnlocalizedName(), FoundryCraftItems.COBALT_DUST.getRegistryName());
@@ -228,6 +232,8 @@ public class FoundryItems
 		tungstenHammer = itemList[itemIndex++] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		uraniumHammer = itemList[itemIndex++] = new ItemUraniumHammer(FoundryCraftItems.URANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.URANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		zincHammer = itemList[itemIndex++] = new ItemZincHammer(FoundryCraftItems.ZINC_HAMMER.getUnlocalizedName(), FoundryCraftItems.ZINC_HAMMER.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		
+		tungstenHoe = itemList[itemIndex++] = new ItemTungstenHoe(FoundryCraftItems.TUNGSTEN_HOE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HOE.getRegistryName(), 2F, 2F, Refercence.tungsten, null);
 		
 		aluminiumPickaxe = itemList[itemIndex++] = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_PICKAXE.getRegistryName(), 1F, 5F, Refercence.aluminium, Refercence.PICKAXE_EFFECTIVE_ON);
 		cobaltPickaxe = itemList[itemIndex++] = new ItemCobaltPickaxe(FoundryCraftItems.COBALT_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COBALT_PICKAXE.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.PICKAXE_EFFECTIVE_ON);

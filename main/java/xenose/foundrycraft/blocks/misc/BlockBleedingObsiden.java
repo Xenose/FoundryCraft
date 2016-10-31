@@ -33,14 +33,13 @@ public class BlockBleedingObsiden extends FoundryBlock
 		
 		System.out.println("pressed on the bleeding obsiden");
 		
+		playerIn.addChatComponentMessage(new TextComponentTranslation("Set the spawn point to: " + pos.add(0, 1, 0)));
+		playerIn.setSpawnPoint(pos.add(0, 1, 0), true);
+		
 		/*if(FoundryMultiblock.checkWorldForBlocks(pos.add(-2, -1, -2), worldIn, multiBlockMap, multiBlockMap.length/2, 2))
 		{
 			playerIn.addChatComponentMessage(new TextComponentTranslation("Set the spawn point to: " + pos.add(0, 1, 0)));
 			playerIn.setSpawnPoint(pos.add(0, 1, 0), true);
-		}
-		
-		else 
-		{
 		}*/
 		
 		return true;

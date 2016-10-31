@@ -25,7 +25,8 @@ public class Refercence
 	
 	public static final CreativeTabs 
 		CREATIVE_TAB = new FoundryTab("tabFoundryTab", 0),
-		CREATIVE_TAB_TOOLS = new FoundryTab("tabFoundryTools", 1);
+		CREATIVE_TAB_TOOLS = new FoundryTab("tabFoundryTools", 1),
+		CRETIVE_TAB_DEBUG_TOOLS = new FoundryTab("tabFoundryDebugTools", 2);
 	
 	public static final Set<Block> HAMMER_EFFECTIVE_ON = Sets.newHashSet(new Block[] 
 			{
@@ -56,11 +57,7 @@ public class Refercence
 						Blocks.SOUL_SAND, Blocks.GRASS_PATH
 					}),
 			
-			EFFECTIVE_ON = Sets.newHashSet(new Block[] 
-					{
-						Blocks.CLAY, Blocks.DIRT, Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, 
-						Blocks.SNOW_LAYER, Blocks.SOUL_SAND, Blocks.GRASS_PATH
-					});
+			EFFECTIVE_ON = Sets.newHashSet(new Block[]{});
 
 
     
@@ -68,6 +65,8 @@ public class Refercence
 	//IRON(2, 250, 6.0F, 2.0F, 14), 			mining levels in use 1 2 3 4 5 6 . 8 . 10 . 12 
 	//EnumHelper.addToolMaterial(				name, harvestLevel, maxUses, efficiency, damage, enchantability) 
 	public static ToolMaterial
+		debug		= EnumHelper.addToolMaterial("DEBUG", 		9999, 	9999, 	9999, 	9999, 	99999),
+	
 		aluminium 	= EnumHelper.addToolMaterial("ALUMINIUM", 	2,		125, 	3, 		1, 		7),
 		cobalt 		= EnumHelper.addToolMaterial("COBALT", 		4, 		500, 	12, 	6, 		24),
 		copper	 	= EnumHelper.addToolMaterial("COPPER", 		1, 		125, 	1, 		1, 		6),
@@ -91,6 +90,7 @@ public class Refercence
 	public static enum FoundryCraftItems
 	{	
 		WET_DARK_STONE_BRICK("wetDarkStoneBrick","ItemWetDarkStoneBrick"),
+		SHOVEL_OF_DIRE("shovelOfDire","ItemShovelOfDire"),
 		
 		ALUMINIUM_AXE("aluminiumAxe","ItemAluminiumAxe"),
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
@@ -127,7 +127,7 @@ public class Refercence
 		LITHIUM_SHOVEL("lithiumShovel","ItemLithiumShovel"),
 		LITHIUM_SWORD("lithiumSword","ItemLithiumSword"),
 		
-		MAGNESIUM_AXE("magneisumAxe","ItemMagnesiumAxe"),
+		MAGNESIUM_AXE("magnesiumAxe","ItemMagnesiumAxe"),
 		MAGNESIUM_HAMMER("magnesiumHammer","ItemMagnesiumHammer"),
 		MAGNESIUM_HOE("magnesiumHoe","ItemMagnesiumHoe"),
 		MAGNESIUM_PICKAXE("magnesiumPickaxe","ItemMagnesiumPickAxe"),
@@ -235,6 +235,7 @@ public class Refercence
 	
 	public static enum FoundryCraftBlocks
 	{	
+		VIRUS_BLOCK("virusBlock","BlockVirusBlock"),
 		TEST_CONTAINER_BLOCK("testContainerBlock","BlockTestContainerBlock"),
 		
 		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
