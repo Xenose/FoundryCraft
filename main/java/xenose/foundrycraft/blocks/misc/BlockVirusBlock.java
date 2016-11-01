@@ -26,8 +26,6 @@ public class BlockVirusBlock extends FoundryBlock
 	{
 		super.updateTick(worldIn, pos, state, rand);
 		
-		System.out.println("tick from virus");
-		
 		if (worldIn.getBlockState(pos.east()) != Blocks.AIR.getDefaultState() && worldIn.getBlockState(pos.east()) != FoundryBlocks.virusBlock.getDefaultState())
 			worldIn.setBlockState(pos.east(), this.getDefaultState());
 		

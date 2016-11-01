@@ -178,7 +178,7 @@ public class Refercence
 		
 		URANIUM_AXE("uraniumAxe","ItemUraniumAxe"),
 		URANIUM_HAMMER("uraniumHammer","ItemUraniumHammer"),
-		URANIUM_HOE("uraniumHoe","ItmeUraniumHoe"),
+		URANIUM_HOE("uraniumHoe","ItemUraniumHoe"),
 		URANIUM_PICKAXE("uraniumPickaxe","ItemUraniumPickaxe"),
 		URANIUM_SHOVEL("uraniumShovel","ItemUraniumShovel"),
 		URANIUM_SWORD("uraniumSword","ItemUraniumSword"),

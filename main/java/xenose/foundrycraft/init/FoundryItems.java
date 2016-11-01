@@ -233,8 +233,21 @@ public class FoundryItems
 		uraniumHammer = itemList[itemIndex++] = new ItemUraniumHammer(FoundryCraftItems.URANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.URANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		zincHammer = itemList[itemIndex++] = new ItemZincHammer(FoundryCraftItems.ZINC_HAMMER.getUnlocalizedName(), FoundryCraftItems.ZINC_HAMMER.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.HAMMER_EFFECTIVE_ON, 3);
 		
+		aluminiumHoe = itemList[itemIndex++] = new ItemAluminiumHoe(FoundryCraftItems.ALUMINIUM_HOE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HOE.getRegistryName(), 2F, 2F, Refercence.aluminium, null);
+		cobaltHoe = itemList[itemIndex++] = new ItemCobaltHoe(FoundryCraftItems.COBALT_HOE.getUnlocalizedName(), FoundryCraftItems.COBALT_HOE.getRegistryName(), 2F, 2F, Refercence.cobalt, null);
+		copperHoe = itemList[itemIndex++] = new ItemCopperHoe(FoundryCraftItems.COPPER_HOE.getUnlocalizedName(), FoundryCraftItems.COPPER_HOE.getRegistryName(), 2F, 2F, Refercence.copper, null);
+		leadHoe = itemList[itemIndex++] = new ItemLeadHoe(FoundryCraftItems.LEAD_HOE.getUnlocalizedName(), FoundryCraftItems.LEAD_HOE.getRegistryName(), 2F, 2F, Refercence.lead, null);
+		lithiumHoe = itemList[itemIndex++] = new ItemLithiumHoe(FoundryCraftItems.LITHIUM_HOE.getUnlocalizedName(), FoundryCraftItems.LITHIUM_HOE.getRegistryName(), 2F, 2F, Refercence.lithium, null);
+		magnesiumHoe = itemList[itemIndex++] = new ItemMagnesiumHoe(FoundryCraftItems.MAGNESIUM_HOE.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_HOE.getRegistryName(), 2F, 2F, Refercence.magnesium, null);
+		nickelHoe = itemList[itemIndex++] = new ItemNickelHoe(FoundryCraftItems.NICKEL_HOE.getUnlocalizedName(), FoundryCraftItems.NICKEL_HOE.getRegistryName(), 2F, 2F, Refercence.nickel, null);
+		platinumHoe = itemList[itemIndex++] = new ItemPlatinumHoe(FoundryCraftItems.PLATINUM_HOE.getUnlocalizedName(), FoundryCraftItems.PLATINUM_HOE.getRegistryName(), 2F, 2F, Refercence.platinum, null);
+		silverHoe = itemList[itemIndex++] = new ItemSilverHoe(FoundryCraftItems.SILVER_HOE.getUnlocalizedName(), FoundryCraftItems.SILVER_HOE.getRegistryName(), 2F, 2F, Refercence.silver, null);
+		tinHoe = itemList[itemIndex++] = new ItemTinHoe(FoundryCraftItems.TIN_HOE.getUnlocalizedName(), FoundryCraftItems.TIN_HOE.getRegistryName(), 2F, 2F, Refercence.tin, null);
+		titaniumHoe = itemList[itemIndex++] = new ItemTitaniumHoe(FoundryCraftItems.TITANIUM_HOE.getUnlocalizedName(), FoundryCraftItems.TITANIUM_HOE.getRegistryName(), 2F, 2F, Refercence.titanium, null);
 		tungstenHoe = itemList[itemIndex++] = new ItemTungstenHoe(FoundryCraftItems.TUNGSTEN_HOE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HOE.getRegistryName(), 2F, 2F, Refercence.tungsten, null);
-		
+		uraniumHoe = itemList[itemIndex++] = new ItemUraniumHoe(FoundryCraftItems.URANIUM_HOE.getUnlocalizedName(), FoundryCraftItems.URANIUM_HOE.getRegistryName(), 2F, 2F, Refercence.zinc, null);
+		zincHoe = itemList[itemIndex++] = new ItemZincHoe(FoundryCraftItems.ZINC_HOE.getUnlocalizedName(), FoundryCraftItems.ZINC_HOE.getRegistryName(), 2F, 2F, Refercence.zinc, null);
+				
 		aluminiumPickaxe = itemList[itemIndex++] = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_PICKAXE.getRegistryName(), 1F, 5F, Refercence.aluminium, Refercence.PICKAXE_EFFECTIVE_ON);
 		cobaltPickaxe = itemList[itemIndex++] = new ItemCobaltPickaxe(FoundryCraftItems.COBALT_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COBALT_PICKAXE.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.PICKAXE_EFFECTIVE_ON);
 		copperPickaxe = itemList[itemIndex++] = new ItemCopperPickaxe(FoundryCraftItems.COPPER_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COPPER_PICKAXE.getRegistryName(), 2F, 3F, Refercence.copper, Refercence.PICKAXE_EFFECTIVE_ON);
