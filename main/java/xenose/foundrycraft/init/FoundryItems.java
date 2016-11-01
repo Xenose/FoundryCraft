@@ -183,9 +183,9 @@ public class FoundryItems
 		platinumDust = itemList[itemIndex++] = new ItemPlatinumDust(FoundryCraftItems.PLATINUM_DUST.getUnlocalizedName(), FoundryCraftItems.PLATINUM_DUST.getRegistryName());
 		silverDust = itemList[itemIndex++] = new ItemSilverDust(FoundryCraftItems.SILVER_DUST.getUnlocalizedName(), FoundryCraftItems.SILVER_DUST.getRegistryName());
 		tinDust = itemList[itemIndex++] = new ItemTinDust(FoundryCraftItems.TIN_DUST.getUnlocalizedName(), FoundryCraftItems.TIN_DUST.getRegistryName());
-		titaniumDust = itemList[itemIndex] = new ItemTitaniumDust(FoundryCraftItems.TITANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.TITANIUM_DUST.getRegistryName());
+		titaniumDust = itemList[itemIndex++] = new ItemTitaniumDust(FoundryCraftItems.TITANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.TITANIUM_DUST.getRegistryName());
 		tungstenDust = itemList[itemIndex++] = new ItemTungstenDust(FoundryCraftItems.TUNGSTEN_DUST.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_DUST.getRegistryName());
-		uraniumDust = itemList[itemIndex++] = new ItemUraniumDust(FoundryCraftItems.URANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.TITANIUM_DUST.getRegistryName());
+		uraniumDust = itemList[itemIndex++] = new ItemUraniumDust(FoundryCraftItems.URANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.URANIUM_DUST.getRegistryName());
 		zincDust = itemList[itemIndex++] = new ItemZincDust(FoundryCraftItems.ZINC_DUST.getUnlocalizedName(), FoundryCraftItems.ZINC_DUST.getRegistryName());
 		
 		aluminiumIngot = itemList[itemIndex++] = new ItemAluminiumIngot(FoundryCraftItems.ALUMINIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_INGOT.getRegistryName());
