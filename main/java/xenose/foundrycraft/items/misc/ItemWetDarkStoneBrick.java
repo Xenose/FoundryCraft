@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.misc;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemWetDarkStoneBrick extends FoundryItem 
 {
 
-	public ItemWetDarkStoneBrick(String unlocalizedName, String registryName) 
+	public ItemWetDarkStoneBrick(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 
 }

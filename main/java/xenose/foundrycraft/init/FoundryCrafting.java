@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import xenose.foundrycraft.Refercence.FoundryCraftItems;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class FoundryCrafting 

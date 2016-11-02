@@ -13,6 +13,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 
 public class BlockLithiumOre extends FoundryBlock
@@ -21,10 +22,10 @@ public class BlockLithiumOre extends FoundryBlock
 	Random random;
 	public static final PropertyBool EXPLODE = PropertyBool.create("explode");
 	
-	public BlockLithiumOre(Material materialIn, String unlocalizedName, String registryName, float hardness) 
+	public BlockLithiumOre(Material materialIn, FoundryCraftBlocks foundryEnum, float hardness) 
 	{
-		super(materialIn, unlocalizedName, registryName, hardness);
-		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
+		super(materialIn, foundryEnum, hardness);
+		setUnlocalizedNameAndRegistry(foundryEnum);
 		random = new Random();
 	}
 	

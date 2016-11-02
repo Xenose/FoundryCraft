@@ -3,14 +3,15 @@ package xenose.foundrycraft.items.tools.hoe;
 import java.util.Set;
 
 import net.minecraft.block.Block;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryHoe;
 import xenose.foundrycraft.items.baseitem.FoundryTool;
 
 public class ItemCopperHoe extends FoundryHoe
 {
-	public ItemCopperHoe(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	public ItemCopperHoe(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, attackSpeedIn, materialIn, effectiveBlocksIn);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 }

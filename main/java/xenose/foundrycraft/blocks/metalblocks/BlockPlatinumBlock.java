@@ -1,15 +1,16 @@
 package xenose.foundrycraft.blocks.metalblocks;
 
 import net.minecraft.block.material.Material;
+import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 
 public class BlockPlatinumBlock extends FoundryBlock
 {
 
-	public BlockPlatinumBlock(Material materialIn, String unlocalizedName, String registryName, float hardness) 
+	public BlockPlatinumBlock(Material materialIn, FoundryCraftBlocks foundryEnum, float hardness) 
 	{
-		super(materialIn, unlocalizedName, registryName, hardness);
-		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
+		super(materialIn, foundryEnum, hardness);
+		setUnlocalizedNameAndRegistry(foundryEnum);
 	}
 
 }

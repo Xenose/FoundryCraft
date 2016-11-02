@@ -6,14 +6,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 
 public class FoundryPickaxe extends FoundryTool
 {
 
-	public FoundryPickaxe(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	public FoundryPickaxe(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
 	}
 	
 	@Override

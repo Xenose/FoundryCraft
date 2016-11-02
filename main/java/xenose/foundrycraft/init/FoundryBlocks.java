@@ -9,8 +9,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import xenose.foundrycraft.Refercence;
-import static xenose.foundrycraft.Refercence.FoundryCraftBlocks;
+import xenose.foundrycraft.Reference;
+import static xenose.foundrycraft.Reference.FoundryCraftBlocks;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.blocks.chest.*;
 import xenose.foundrycraft.blocks.metalblocks.*;
@@ -18,10 +22,7 @@ import xenose.foundrycraft.blocks.misc.*;
 import xenose.foundrycraft.blocks.ores.*;
 
 public class FoundryBlocks 
-{	
-	
-	private static int blockIndex;
-	
+{		
 	public static FoundryBlock
 	
 		virusBlock,
@@ -61,69 +62,63 @@ public class FoundryBlocks
 		uraniumBlock,
 		zincBlock;
 	
-	public static FoundryBlock[] blockList = new FoundryBlock[FoundryCraftBlocks.values().length];
+	public static List<FoundryBlock> blockList;
 	
 	public static void init()
 	{
-		blockIndex = 0;
+		blockList = new ArrayList<FoundryBlock>();
 		
-		virusBlock		=	blockList[blockIndex++]	= new BlockVirusBlock(Material.CLOTH, FoundryCraftBlocks.VIRUS_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.VIRUS_BLOCK.getRegistryName(), 3F);
-		blackStoneBrick	= 	blockList[blockIndex++] = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK.getUnlocalizedName(), FoundryCraftBlocks.BLACK_STONE_BRICK.getRegistryName(), 1F);
-		bleedingObsiden =	blockList[blockIndex++] = new BlockBleedingObsiden(Material.ROCK, FoundryCraftBlocks.BLEEDING_OBSIDEN.getUnlocalizedName(), FoundryCraftBlocks.BLEEDING_OBSIDEN.getRegistryName(), 40F);
+		blockList.add(virusBlock = new BlockVirusBlock(Material.CLOTH, FoundryCraftBlocks.VIRUS_BLOCK, 3F));
+		blockList.add(blackStoneBrick = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK, 1F));
+		blockList.add(bleedingObsiden = new BlockBleedingObsiden(Material.ROCK, FoundryCraftBlocks.BLEEDING_OBSIDEN, 40F));
+
+		// ores 
+		blockList.add(aluminiumOre = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE, 15F));
+		blockList.add(cobaltOre = new BlockCobaltOre(Material.ROCK, FoundryCraftBlocks.COBALT_ORE, 15F));
+		blockList.add(copperOre = new BlockCopperOre(Material.ROCK, FoundryCraftBlocks.COPPER_ORE, 15F));
+		blockList.add(leadOre = new BlockLeadOre(Material.ROCK, FoundryCraftBlocks.LEAD_ORE, 15F));
+		blockList.add(lithiumOre = new BlockLithiumOre(Material.ROCK, FoundryCraftBlocks.LITHIUM_ORE, 15F));
+		blockList.add(magnesiumOre = new BlockMagnesiumOre(Material.ROCK, FoundryCraftBlocks.MAGNESIUM_ORE, 15F));
+		blockList.add(nickelOre = new BlockNickelOre(Material.ROCK, FoundryCraftBlocks.NICKEL_ORE, 15F));
+		blockList.add(platinumOre = new BlockPlatinumOre(Material.ROCK, FoundryCraftBlocks.PLATINUM_ORE, 15F));
+		blockList.add(silverOre = new BlockSilverOre(Material.ROCK, FoundryCraftBlocks.SILVER_ORE, 15F));
+		blockList.add(tinOre = new BlockTinOre(Material.ROCK, FoundryCraftBlocks.TIN_ORE, 15F));
+		blockList.add(titaniumOre = new BlockTitaniumOre(Material.ROCK, FoundryCraftBlocks.TITANIUM_ORE, 15F));
+		blockList.add(tungstenOre = new BlockTungstenOre(Material.ROCK, FoundryCraftBlocks.TUNGSTEN_ORE, 15F));
+		blockList.add(uraniumOre = new BlockUraniumOre(Material.ROCK, FoundryCraftBlocks.URANIUM_ORE, 15F));
+		blockList.add(zincOre = new BlockZincOre(Material.ROCK, FoundryCraftBlocks.ZINC_ORE, 15F));
+		
 		//coloredPlanks 	=	blockList[blockIndex++] = new BlockDyedPlanks(Material.WOOD, FoundryCraftBlocks.COLORED_PLANKS.getUnlocalizedName(), FoundryCraftBlocks.COLORED_PLANKS.getRegistryName(), 1F);
 		
-		// ores 
-		aluminiumOre 	= 	blockList[blockIndex++] = new BlockAluminiumOre(Material.ROCK, FoundryCraftBlocks.ALUMINIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_ORE.getRegistryName(), 15F);
-		cobaltOre 		= 	blockList[blockIndex++] = new BlockCobaltOre(Material.ROCK, FoundryCraftBlocks.COBALT_ORE.getUnlocalizedName(), FoundryCraftBlocks.COBALT_ORE.getRegistryName(), 15F);
-		copperOre 		= 	blockList[blockIndex++] = new BlockCopperOre(Material.ROCK, FoundryCraftBlocks.COPPER_ORE.getUnlocalizedName(), FoundryCraftBlocks.COPPER_ORE.getRegistryName(), 15F);
-		leadOre 		= 	blockList[blockIndex++] = new BlockLeadOre(Material.ROCK, FoundryCraftBlocks.LEAD_ORE.getUnlocalizedName(), FoundryCraftBlocks.LEAD_ORE.getRegistryName(), 15F);
-		lithiumOre 		= 	blockList[blockIndex++] = new BlockLithiumOre(Material.ROCK, FoundryCraftBlocks.LITHIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.LITHIUM_ORE.getRegistryName(), 15F);
-		magnesiumOre 	=	blockList[blockIndex++] = new BlockMagnesiumOre(Material.ROCK, FoundryCraftBlocks.MAGNESIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.MAGNESIUM_ORE.getRegistryName(), 15F);
-		nickelOre 		= 	blockList[blockIndex++] = new BlockNickelOre(Material.ROCK, FoundryCraftBlocks.NICKEL_ORE.getUnlocalizedName(), FoundryCraftBlocks.NICKEL_ORE.getRegistryName(), 15F);
-		platinumOre 	= 	blockList[blockIndex++] = new BlockPlatinumOre(Material.ROCK, FoundryCraftBlocks.PLATINUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.PLATINUM_ORE.getRegistryName(), 15F);
-		silverOre 		= 	blockList[blockIndex++] = new BlockSilverOre(Material.ROCK, FoundryCraftBlocks.SILVER_ORE.getUnlocalizedName(), FoundryCraftBlocks.SILVER_ORE.getRegistryName(), 15F);
-		tinOre 			= 	blockList[blockIndex++] = new BlockTinOre(Material.ROCK, FoundryCraftBlocks.TIN_ORE.getUnlocalizedName(), FoundryCraftBlocks.TIN_ORE.getRegistryName(), 15F);
-		titaniumOre 	= 	blockList[blockIndex++] = new BlockTitaniumOre(Material.ROCK, FoundryCraftBlocks.TITANIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.TITANIUM_ORE.getRegistryName(), 15F);
-		tungstenOre 	= 	blockList[blockIndex++] = new BlockTungstenOre(Material.ROCK, FoundryCraftBlocks.TUNGSTEN_ORE.getUnlocalizedName(), FoundryCraftBlocks.TUNGSTEN_ORE.getRegistryName(), 15F);
-		uraniumOre 		= 	blockList[blockIndex++] = new BlockUraniumOre(Material.ROCK, FoundryCraftBlocks.URANIUM_ORE.getUnlocalizedName(), FoundryCraftBlocks.URANIUM_ORE.getRegistryName(), 15F);
-		zincOre 		= 	blockList[blockIndex++] = new BlockZincOre(Material.ROCK, FoundryCraftBlocks.ZINC_ORE.getUnlocalizedName(),FoundryCraftBlocks.ZINC_ORE.getRegistryName(), 15F);
-		
 		//metal blocks
-		aluminiumBlock 	= 	blockList[blockIndex++] = new BlockAluminiumBlock(Material.IRON, FoundryCraftBlocks.ALUMINIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.ALUMINIUM_BLOCK.getRegistryName(), 15F);
-		cobaltBlock 	= 	blockList[blockIndex++] = new BlockCobaltBlock(Material.IRON, FoundryCraftBlocks.COBALT_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.COBALT_BLOCK.getRegistryName(), 15F);
-		copperBlock 	= 	blockList[blockIndex++] = new BlockCopperBlock(Material.IRON, FoundryCraftBlocks.COPPER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.COPPER_BLOCK.getRegistryName(), 15F);
-		leadBlock 		= 	blockList[blockIndex++] = new BlockLeadBlock(Material.IRON, FoundryCraftBlocks.LEAD_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.LEAD_BLOCK.getRegistryName(), 15F);
-		lithiumBlock 	= 	blockList[blockIndex++] = new BlockLithiumBlock(Material.IRON, FoundryCraftBlocks.LITHIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.LITHIUM_BLOCK.getRegistryName(), 15F);
-		magnesiumBlock 	= 	blockList[blockIndex++] = new BlockMagnesiumBlock(Material.IRON, FoundryCraftBlocks.MAGNESIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.MAGNESIUM_BLOCK.getRegistryName(), 15F);
-		nickelBlock 	= 	blockList[blockIndex++] = new BlockNickelBlock(Material.IRON, FoundryCraftBlocks.NICKEL_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.NICKEL_BLOCK.getRegistryName(), 15F);
-		platinumBlock 	= 	blockList[blockIndex++] = new BlockPlatinumBlock(Material.IRON, FoundryCraftBlocks.PLATINUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.PLATINUM_BLOCK.getRegistryName(), 15F);
-		silverBlock 	= 	blockList[blockIndex++] = new BlockSilverBlock(Material.IRON, FoundryCraftBlocks.SILVER_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.SILVER_BLOCK.getRegistryName(), 15F);
-		tinBlock 		= 	blockList[blockIndex++] = new BlockTinBlock(Material.IRON, FoundryCraftBlocks.TIN_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TIN_BLOCK.getRegistryName(), 15F);
-		titaniumBlock 	= 	blockList[blockIndex++] = new BlockTitaniumBlock(Material.IRON, FoundryCraftBlocks.TITANIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TITANIUM_BLOCK.getRegistryName(), 15F);
-		tungstenBlock 	=	blockList[blockIndex++] = new BlockTungstenBlock(Material.IRON, FoundryCraftBlocks.TUNGSTEN_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.TUNGSTEN_BLOCK.getRegistryName(), 15F);
-		uraniumBlock 	= 	blockList[blockIndex++] = new BlockUraniumBlock(Material.IRON, FoundryCraftBlocks.URANIUM_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.URANIUM_BLOCK.getRegistryName(), 15F);
-		zincBlock 		= 	blockList[blockIndex++] = new BlockZincBlock(Material.IRON, FoundryCraftBlocks.ZINC_BLOCK.getUnlocalizedName(), FoundryCraftBlocks.ZINC_BLOCK.getRegistryName(), 15f);
+		blockList.add(aluminiumBlock = new BlockAluminiumBlock(Material.IRON, FoundryCraftBlocks.ALUMINIUM_BLOCK, 15F));
+		blockList.add(cobaltBlock = new BlockCobaltBlock(Material.IRON, FoundryCraftBlocks.COBALT_BLOCK, 15F));
+		blockList.add(copperBlock = new BlockCopperBlock(Material.IRON, FoundryCraftBlocks.COPPER_BLOCK, 15F));
+		blockList.add(leadBlock = new BlockLeadBlock(Material.IRON, FoundryCraftBlocks.LEAD_BLOCK, 15F));
+		blockList.add(lithiumBlock = new BlockLithiumBlock(Material.IRON, FoundryCraftBlocks.LITHIUM_BLOCK, 15F));
+		blockList.add(magnesiumBlock = new BlockMagnesiumBlock(Material.IRON, FoundryCraftBlocks.MAGNESIUM_BLOCK, 15F));
+		blockList.add(nickelBlock = new BlockNickelBlock(Material.IRON, FoundryCraftBlocks.NICKEL_BLOCK, 15F));
+		blockList.add(platinumBlock = new BlockPlatinumBlock(Material.IRON, FoundryCraftBlocks.PLATINUM_BLOCK, 15F));
+		blockList.add(silverBlock = new BlockSilverBlock(Material.IRON, FoundryCraftBlocks.SILVER_BLOCK, 15F));
+		blockList.add(tinBlock = new BlockTinBlock(Material.IRON, FoundryCraftBlocks.TIN_BLOCK, 15F));
+		blockList.add(titaniumBlock = new BlockTitaniumBlock(Material.IRON, FoundryCraftBlocks.TITANIUM_BLOCK, 15F));
+		blockList.add(tungstenBlock = new BlockTungstenBlock(Material.IRON, FoundryCraftBlocks.TUNGSTEN_BLOCK, 15F));
+		blockList.add(uraniumBlock = new BlockUraniumBlock(Material.IRON, FoundryCraftBlocks.URANIUM_BLOCK, 15F));
+		blockList.add(zincBlock = new BlockZincBlock(Material.IRON, FoundryCraftBlocks.ZINC_BLOCK, 15f));
 		
-		blockIndex = 0;
-		
-		System.out.println("Number of blocks in FoundryBlocks init: " + blockList.length);
+		System.out.println("Number of blocks in FoundryBlocks init: " + blockList.size());
 	}
 	
 	public static void register()
 	{
 		System.out.println("Loading in Blocks:");
 		
-		for (int i = 0; i < blockList.length; i++) 
+		for (int i = 0; i < blockList.size(); i++) 
 		{
-			if(blockList[i] != null)
+			if(blockList.get(i) != null)
 			{
-				System.out.println(blockList[i].getUnlocalizedName());
-				registerFoundryBlock(blockList[i]);
-				
-				/*if(blockList[blockIndex] instanceof BlockDyedPlanks)
-				{
-					Register BlockDyedPlanks = (BlockDyedPlanks) blockList[blockIndex];
-				}*/
+				System.out.println(blockList.get(i).getUnlocalizedName());
+				registerFoundryBlock(blockList.get(i));
 			}
 		}
 	}
@@ -138,12 +133,11 @@ public class FoundryBlocks
 	
 	public static void registerRenders()
 	{
-		for (int i = 0; i < blockList.length; i++) 
+		for (int i = 0; i < blockList.size(); i++) 
 		{
-			if(blockList[i] != null)
-				if (!blockList[i].hasCustomModel())
-					registerRender(blockList[i]);
-				else blockList[i].loadCustomModel();
+			if (!blockList.get(i).hasCustomModel())
+				registerRender(blockList.get(i));
+			else blockList.get(i).loadCustomModel();
 		}
 	}
 	

@@ -1,5 +1,7 @@
 package xenose.foundrycraft.init;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.http.client.ConnectionBackoffStrategy;
@@ -13,11 +15,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import scala.collection.Searching.Found;
 import scala.tools.ant.sabbus.CompilationPathProperty;
 
-import static xenose.foundrycraft.Refercence.FoundryCraftItems;
+import static xenose.foundrycraft.Reference.FoundryCraftItems;
 
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.items.ingots.*;
 import xenose.foundrycraft.items.misc.ItemWetDarkStoneBrick;
+import xenose.foundrycraft.items.baseitem.FoundryItem;
 import xenose.foundrycraft.items.dusts.*;
 import xenose.foundrycraft.items.tools.*;
 import xenose.foundrycraft.items.tools.axe.*;
@@ -30,8 +34,6 @@ import xenose.foundrycraft.items.tools.sword.*;
 
 public class FoundryItems
 {	
-	
-	private static int itemIndex;
 	
 	public static Item 
 	
@@ -164,123 +166,121 @@ public class FoundryItems
 		zincHoe,
 		zincShovel;
 	
-	public static Item[] itemList = new Item[FoundryCraftItems.values().length];
+	public static List<Item> itemList;
 	
 	public static void init()
 	{
-		itemIndex = 0;
+		itemList = new ArrayList<Item>();
 		
-		wetDarkStoneBrick = itemList[itemIndex++] = new ItemWetDarkStoneBrick(FoundryCraftItems.WET_DARK_STONE_BRICK.getUnlocalizedName(), FoundryCraftItems.WET_DARK_STONE_BRICK.getRegistryName());
-		shovelOfDire = itemList[itemIndex++] = new ItemShovelOfDire(FoundryCraftItems.SHOVEL_OF_DIRE.getUnlocalizedName(), FoundryCraftItems.SHOVEL_OF_DIRE.getRegistryName(), 10, 10, Refercence.debug, Refercence.HAMMER_EFFECTIVE_ON);
+		itemList.add(wetDarkStoneBrick = new ItemWetDarkStoneBrick(FoundryCraftItems.WET_DARK_STONE_BRICK));
+		itemList.add(shovelOfDire = new ItemShovelOfDire(FoundryCraftItems.SHOVEL_OF_DIRE, 10, 10, Reference.debug, Reference.HAMMER_EFFECTIVE_ON));
 		
-		aluminiumDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.ALUMINIUM_DUST.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_DUST.getRegistryName());
-		cobaltDust = itemList[itemIndex++] = new ItemAluminiumDust(FoundryCraftItems.COBALT_DUST.getUnlocalizedName(), FoundryCraftItems.COBALT_DUST.getRegistryName());
-		copperDust = itemList[itemIndex++] = new ItemCopperDust(FoundryCraftItems.COPPER_DUST.getUnlocalizedName(), FoundryCraftItems.COPPER_DUST.getRegistryName());
-		leadDust = itemList[itemIndex++] = new ItemLeadDust(FoundryCraftItems.LEAD_DUST.getUnlocalizedName(), FoundryCraftItems.LEAD_DUST.getRegistryName());
-		lithiumDust = itemList[itemIndex++] = new ItemLithiumDust(FoundryCraftItems.LITHIUM_DUST.getUnlocalizedName(), FoundryCraftItems.LITHIUM_DUST.getRegistryName());
-		magnesiumDust = itemList[itemIndex++] = new ItemMagnesiumDust(FoundryCraftItems.MAGNESIUM_DUST.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_DUST.getRegistryName());
-		nickelDust = itemList[itemIndex++] = new ItemNickelDust(FoundryCraftItems.NICKEL_DUST.getUnlocalizedName(), FoundryCraftItems.NICKEL_DUST.getRegistryName());
-		platinumDust = itemList[itemIndex++] = new ItemPlatinumDust(FoundryCraftItems.PLATINUM_DUST.getUnlocalizedName(), FoundryCraftItems.PLATINUM_DUST.getRegistryName());
-		silverDust = itemList[itemIndex++] = new ItemSilverDust(FoundryCraftItems.SILVER_DUST.getUnlocalizedName(), FoundryCraftItems.SILVER_DUST.getRegistryName());
-		tinDust = itemList[itemIndex++] = new ItemTinDust(FoundryCraftItems.TIN_DUST.getUnlocalizedName(), FoundryCraftItems.TIN_DUST.getRegistryName());
-		titaniumDust = itemList[itemIndex++] = new ItemTitaniumDust(FoundryCraftItems.TITANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.TITANIUM_DUST.getRegistryName());
-		tungstenDust = itemList[itemIndex++] = new ItemTungstenDust(FoundryCraftItems.TUNGSTEN_DUST.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_DUST.getRegistryName());
-		uraniumDust = itemList[itemIndex++] = new ItemUraniumDust(FoundryCraftItems.URANIUM_DUST.getUnlocalizedName(), FoundryCraftItems.URANIUM_DUST.getRegistryName());
-		zincDust = itemList[itemIndex++] = new ItemZincDust(FoundryCraftItems.ZINC_DUST.getUnlocalizedName(), FoundryCraftItems.ZINC_DUST.getRegistryName());
+		itemList.add(aluminiumDust = new ItemAluminiumDust(FoundryCraftItems.ALUMINIUM_DUST));
+		itemList.add(cobaltDust = new ItemCobaltDust(FoundryCraftItems.COBALT_DUST));
+		itemList.add(copperDust = new ItemCopperDust(FoundryCraftItems.COPPER_DUST));
+		itemList.add(leadDust = new ItemLeadDust(FoundryCraftItems.LEAD_DUST));
+		itemList.add(lithiumDust = new ItemLithiumDust(FoundryCraftItems.LITHIUM_DUST));
+		itemList.add(magnesiumDust = new ItemMagnesiumDust(FoundryCraftItems.MAGNESIUM_DUST));
+		itemList.add(nickelDust = new ItemNickelDust(FoundryCraftItems.NICKEL_DUST));
+		itemList.add(platinumDust = new ItemPlatinumDust(FoundryCraftItems.PLATINUM_DUST));
+		itemList.add(silverDust = new ItemSilverDust(FoundryCraftItems.SILVER_DUST));
+		itemList.add(tinDust = new ItemTinDust(FoundryCraftItems.TIN_DUST));
+		itemList.add(titaniumDust = new ItemTitaniumDust(FoundryCraftItems.TITANIUM_DUST));
+		itemList.add(tungstenDust = new ItemTungstenDust(FoundryCraftItems.TUNGSTEN_DUST));
+		itemList.add(uraniumDust = new ItemUraniumDust(FoundryCraftItems.URANIUM_DUST));
+		itemList.add(zincDust = new ItemZincDust(FoundryCraftItems.ZINC_DUST));
 		
-		aluminiumIngot = itemList[itemIndex++] = new ItemAluminiumIngot(FoundryCraftItems.ALUMINIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_INGOT.getRegistryName());
-		cobaltIngot = itemList[itemIndex++] = new ItemAluminiumIngot(FoundryCraftItems.COBALT_INGOT.getUnlocalizedName(), FoundryCraftItems.COBALT_INGOT.getRegistryName());
-		copperIngot = itemList[itemIndex++] = new ItemCopperIngot(FoundryCraftItems.COPPER_INGOT.getUnlocalizedName(), FoundryCraftItems.COPPER_INGOT.getRegistryName());
-		leadIngot = itemList[itemIndex++] = new ItemLeadIngot(FoundryCraftItems.LEAD_INGOT.getUnlocalizedName(), FoundryCraftItems.LEAD_INGOT.getRegistryName());
-		lithiumIngot = itemList[itemIndex++] = new ItemLithiumIngot(FoundryCraftItems.LITHIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.LITHIUM_INGOT.getRegistryName());
-		magnesiumIngot = itemList[itemIndex++] = new ItemMagnesiumIngot(FoundryCraftItems.MAGNESIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_INGOT.getRegistryName());
-		nickelIngot = itemList[itemIndex++] = new ItemNickelIngot(FoundryCraftItems.NICKEL_INGOT.getUnlocalizedName(), FoundryCraftItems.NICKEL_INGOT.getRegistryName());
-		platinumIngot = itemList[itemIndex++] = new ItemPlatinumIngot(FoundryCraftItems.PLATINUM_INGOT.getUnlocalizedName(), FoundryCraftItems.PLATINUM_INGOT.getRegistryName());
-		silverIngot = itemList[itemIndex++] = new ItemSilverIngot(FoundryCraftItems.SILVER_INGOT.getUnlocalizedName(), FoundryCraftItems.SILVER_INGOT.getRegistryName());
-		tinIngot = itemList[itemIndex++] = new ItemTinIngot(FoundryCraftItems.TIN_INGOT.getUnlocalizedName(), FoundryCraftItems.TIN_INGOT.getRegistryName());
-		titaniumIngot = itemList[itemIndex++] = new ItemTitaniumIngot(FoundryCraftItems.TITANIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.TITANIUM_INGOT.getRegistryName());
-		tungstenIngot = itemList[itemIndex++] = new ItemTungstenIngot(FoundryCraftItems.TUNGSTEN_INGOT.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_INGOT.getRegistryName());
-		uraniumIngot = itemList[itemIndex++] = new ItemUraniumIngot(FoundryCraftItems.URANIUM_INGOT.getUnlocalizedName(), FoundryCraftItems.URANIUM_INGOT.getRegistryName());
-		zincIngot = itemList[itemIndex++] = new ItemZincIngot(FoundryCraftItems.ZINC_INGOT.getUnlocalizedName(), FoundryCraftItems.ZINC_INGOT.getRegistryName());
+		itemList.add(aluminiumIngot = new ItemAluminiumIngot(FoundryCraftItems.ALUMINIUM_INGOT));
+		itemList.add(cobaltIngot = new ItemCobaltIngot(FoundryCraftItems.COBALT_INGOT));
+		itemList.add(copperIngot = new ItemCopperIngot(FoundryCraftItems.COPPER_INGOT));
+		itemList.add(leadIngot = new ItemLeadIngot(FoundryCraftItems.LEAD_INGOT));
+		itemList.add(lithiumIngot = new ItemLithiumIngot(FoundryCraftItems.LITHIUM_INGOT));
+		itemList.add(magnesiumIngot = new ItemMagnesiumIngot(FoundryCraftItems.MAGNESIUM_INGOT));
+		itemList.add(nickelIngot = new ItemNickelIngot(FoundryCraftItems.NICKEL_INGOT));
+		itemList.add(platinumIngot = new ItemPlatinumIngot(FoundryCraftItems.PLATINUM_INGOT));
+		itemList.add(silverIngot = new ItemSilverIngot(FoundryCraftItems.SILVER_INGOT));
+		itemList.add(tinIngot = new ItemTinIngot(FoundryCraftItems.TIN_INGOT));
+		itemList.add(titaniumIngot = new ItemTitaniumIngot(FoundryCraftItems.TITANIUM_INGOT));
+		itemList.add(tungstenIngot = new ItemTungstenIngot(FoundryCraftItems.TUNGSTEN_INGOT));
+		itemList.add(uraniumIngot = new ItemUraniumIngot(FoundryCraftItems.URANIUM_INGOT));
+		itemList.add(zincIngot = new ItemZincIngot(FoundryCraftItems.ZINC_INGOT));
 		
-		aluminiumAxe = itemList[itemIndex++] = new ItemAluminiumAxe(FoundryCraftItems.ALUMINIUM_AXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_AXE.getRegistryName(), 2F, 3F, Refercence.aluminium, Refercence.AXE_EFFECTIVE_ON);
-		cobaltAxe = itemList[itemIndex++] = new ItemCobaltAxe(FoundryCraftItems.COBALT_AXE.getUnlocalizedName(), FoundryCraftItems.COBALT_AXE.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.AXE_EFFECTIVE_ON);
-		copperAxe = itemList[itemIndex++] = new ItemCopperAxe(FoundryCraftItems.COPPER_AXE.getUnlocalizedName(), FoundryCraftItems.COPPER_AXE.getRegistryName(), 2F, 2F, Refercence.copper, Refercence.AXE_EFFECTIVE_ON);
-		leadAxe = itemList[itemIndex++] = new ItemLeadAxe(FoundryCraftItems.LEAD_AXE.getUnlocalizedName(), FoundryCraftItems.LEAD_AXE.getRegistryName(), 2F, 2F, Refercence.lead, Refercence.AXE_EFFECTIVE_ON);
-		lithiumAxe = itemList[itemIndex++] = new ItemLithiumAxe(FoundryCraftItems.LITHIUM_AXE.getUnlocalizedName(), FoundryCraftItems.LITHIUM_AXE.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.AXE_EFFECTIVE_ON);
-		magnesiumAxe = itemList[itemIndex++] = new ItemMagnesiumAxe(FoundryCraftItems.MAGNESIUM_AXE.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_AXE.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.AXE_EFFECTIVE_ON);
-		nickelAxe = itemList[itemIndex++] = new ItemNickelAxe(FoundryCraftItems.NICKEL_AXE.getUnlocalizedName(), FoundryCraftItems.NICKEL_AXE.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.AXE_EFFECTIVE_ON);
-		platinumAxe = itemList[itemIndex++] = new ItemPlatinumAxe(FoundryCraftItems.PLATINUM_AXE.getUnlocalizedName(), FoundryCraftItems.PLATINUM_AXE.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.AXE_EFFECTIVE_ON);
-		silverAxe = itemList[itemIndex++] = new ItemSilverAxe(FoundryCraftItems.SILVER_AXE.getUnlocalizedName(), FoundryCraftItems.SILVER_AXE.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.AXE_EFFECTIVE_ON);
-		tinAxe = itemList[itemIndex++] = new ItemTinAxe(FoundryCraftItems.TIN_AXE.getUnlocalizedName(), FoundryCraftItems.TIN_AXE.getRegistryName(), 2F , 2F, Refercence.tin, Refercence.AXE_EFFECTIVE_ON);
-		titaniumAxe = itemList[itemIndex++] = new ItemTitaniumAxe(FoundryCraftItems.TITANIUM_AXE.getUnlocalizedName(), FoundryCraftItems.TITANIUM_AXE.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.AXE_EFFECTIVE_ON);
-		tungstenAxe = itemList[itemIndex++] = new ItemTungstenAxe(FoundryCraftItems.TUNGSTEN_AXE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_AXE.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.AXE_EFFECTIVE_ON);
-		uraniumAxe = itemList[itemIndex++] = new ItemUraniumAxe(FoundryCraftItems.URANIUM_AXE.getUnlocalizedName(), FoundryCraftItems.URANIUM_AXE.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.AXE_EFFECTIVE_ON);
-		zincAxe = itemList[itemIndex++] = new ItemZincAxe(FoundryCraftItems.ZINC_AXE.getUnlocalizedName(), FoundryCraftItems.ZINC_AXE.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.AXE_EFFECTIVE_ON);
+		itemList.add(aluminiumAxe = new ItemAluminiumAxe(FoundryCraftItems.ALUMINIUM_AXE, 2F, 3F, Reference.aluminium, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(cobaltAxe = new ItemCobaltAxe(FoundryCraftItems.COBALT_AXE, 2F, 2F, Reference.cobalt, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(copperAxe = new ItemCopperAxe(FoundryCraftItems.COPPER_AXE, 2F, 2F, Reference.copper, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(leadAxe = new ItemLeadAxe(FoundryCraftItems.LEAD_AXE, 2F, 2F, Reference.lead, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(lithiumAxe = new ItemLithiumAxe(FoundryCraftItems.LITHIUM_AXE, 2F, 2F, Reference.lithium, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(magnesiumAxe = new ItemMagnesiumAxe(FoundryCraftItems.MAGNESIUM_AXE, 2F, 2F, Reference.magnesium, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(nickelAxe = new ItemNickelAxe(FoundryCraftItems.NICKEL_AXE, 2F, 2F, Reference.nickel, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(platinumAxe = new ItemPlatinumAxe(FoundryCraftItems.PLATINUM_AXE, 2F, 2F, Reference.platinum, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(silverAxe = new ItemSilverAxe(FoundryCraftItems.SILVER_AXE, 2F, 2F, Reference.silver, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(tinAxe = new ItemTinAxe(FoundryCraftItems.TIN_AXE, 2F , 2F, Reference.tin, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(titaniumAxe = new ItemTitaniumAxe(FoundryCraftItems.TITANIUM_AXE, 2F, 2F, Reference.titanium, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(tungstenAxe = new ItemTungstenAxe(FoundryCraftItems.TUNGSTEN_AXE, 2F, 2F, Reference.tungsten, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(uraniumAxe = new ItemUraniumAxe(FoundryCraftItems.URANIUM_AXE, 2F, 2F, Reference.uranium, Reference.AXE_EFFECTIVE_ON));
+		itemList.add(zincAxe = new ItemZincAxe(FoundryCraftItems.ZINC_AXE, 2F, 2F, Reference.zinc, Reference.AXE_EFFECTIVE_ON));
 		
-		aluminiumHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.ALUMINIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HAMMER.getRegistryName(), 2F, 3F, Refercence.aluminium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		cobaltHammer = itemList[itemIndex++] = new ItemAluminiumHammer(FoundryCraftItems.COBALT_HAMMER.getUnlocalizedName(), FoundryCraftItems.COBALT_HAMMER.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		copperHammer = itemList[itemIndex++] = new ItemCopperHammer(FoundryCraftItems.COPPER_HAMMER.getUnlocalizedName(), FoundryCraftItems.COPPER_HAMMER.getRegistryName(), 2F, 2F, Refercence.copper, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		leadHammer = itemList[itemIndex++] = new ItemLeadHammer(FoundryCraftItems.LEAD_HAMMER.getUnlocalizedName(), FoundryCraftItems.LEAD_HAMMER.getRegistryName(), 2F, 1F, Refercence.lead, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		lithiumHammer = itemList[itemIndex++] = new ItemLithiumHammer(FoundryCraftItems.LITHIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.LITHIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		magnesiumHammer = itemList[itemIndex++] = new ItemMagnesiumHammer(FoundryCraftItems.MAGNESIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		nickelHammer = itemList[itemIndex++] = new ItemNickelHammer(FoundryCraftItems.NICKEL_HAMMER.getUnlocalizedName(), FoundryCraftItems.NICKEL_HAMMER.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.HAMMER_EFFECTIVE_ON,	 3);
-		platinumHammer = itemList[itemIndex++] = new ItemPlatinumHammer(FoundryCraftItems.PLATINUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.PLATINUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		silverHammmer = itemList[itemIndex++] = new ItemSilverHammer(FoundryCraftItems.SILVER_HAMMER.getUnlocalizedName(), FoundryCraftItems.SILVER_HAMMER.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		tinHammer = itemList[itemIndex++] = new ItemTinHammer(FoundryCraftItems.TIN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TIN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tin, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		titaniumHammer = itemList[itemIndex++] = new ItemTitaniumHammer(FoundryCraftItems.TITANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.TITANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		tungstenHammer = itemList[itemIndex++] = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HAMMER.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		uraniumHammer = itemList[itemIndex++] = new ItemUraniumHammer(FoundryCraftItems.URANIUM_HAMMER.getUnlocalizedName(), FoundryCraftItems.URANIUM_HAMMER.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.HAMMER_EFFECTIVE_ON, 3);
-		zincHammer = itemList[itemIndex++] = new ItemZincHammer(FoundryCraftItems.ZINC_HAMMER.getUnlocalizedName(), FoundryCraftItems.ZINC_HAMMER.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.HAMMER_EFFECTIVE_ON, 3);
+		itemList.add(aluminiumHammer = new ItemAluminiumHammer(FoundryCraftItems.ALUMINIUM_HAMMER, 2F, 3F, Reference.aluminium, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(cobaltHammer = new ItemCobaltHammer(FoundryCraftItems.COBALT_HAMMER, 2F, 2F, Reference.cobalt, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(copperHammer = new ItemCopperHammer(FoundryCraftItems.COPPER_HAMMER, 2F, 2F, Reference.copper, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(leadHammer = new ItemLeadHammer(FoundryCraftItems.LEAD_HAMMER, 2F, 1F, Reference.lead, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(lithiumHammer = new ItemLithiumHammer(FoundryCraftItems.LITHIUM_HAMMER, 2F, 2F, Reference.lithium, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(magnesiumHammer = new ItemMagnesiumHammer(FoundryCraftItems.MAGNESIUM_HAMMER, 2F, 2F, Reference.magnesium, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(nickelHammer = new ItemNickelHammer(FoundryCraftItems.NICKEL_HAMMER, 2F, 2F, Reference.nickel, Reference.HAMMER_EFFECTIVE_ON,	 3));
+		itemList.add(platinumHammer = new ItemPlatinumHammer(FoundryCraftItems.PLATINUM_HAMMER, 2F, 2F, Reference.platinum, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(silverHammmer = new ItemSilverHammer(FoundryCraftItems.SILVER_HAMMER, 2F, 2F, Reference.silver, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(tinHammer = new ItemTinHammer(FoundryCraftItems.TIN_HAMMER, 2F, 2F, Reference.tin, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(titaniumHammer = new ItemTitaniumHammer(FoundryCraftItems.TITANIUM_HAMMER, 2F, 2F, Reference.titanium, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(tungstenHammer = new ItemTungstenHammer(FoundryCraftItems.TUNGSTEN_HAMMER, 2F, 2F, Reference.tungsten, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(uraniumHammer = new ItemUraniumHammer(FoundryCraftItems.URANIUM_HAMMER, 2F, 2F, Reference.uranium, Reference.HAMMER_EFFECTIVE_ON, 3));
+		itemList.add(zincHammer = new ItemZincHammer(FoundryCraftItems.ZINC_HAMMER, 2F, 2F, Reference.zinc, Reference.HAMMER_EFFECTIVE_ON, 3));
 		
-		aluminiumHoe = itemList[itemIndex++] = new ItemAluminiumHoe(FoundryCraftItems.ALUMINIUM_HOE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_HOE.getRegistryName(), 2F, 2F, Refercence.aluminium, null);
-		cobaltHoe = itemList[itemIndex++] = new ItemCobaltHoe(FoundryCraftItems.COBALT_HOE.getUnlocalizedName(), FoundryCraftItems.COBALT_HOE.getRegistryName(), 2F, 2F, Refercence.cobalt, null);
-		copperHoe = itemList[itemIndex++] = new ItemCopperHoe(FoundryCraftItems.COPPER_HOE.getUnlocalizedName(), FoundryCraftItems.COPPER_HOE.getRegistryName(), 2F, 2F, Refercence.copper, null);
-		leadHoe = itemList[itemIndex++] = new ItemLeadHoe(FoundryCraftItems.LEAD_HOE.getUnlocalizedName(), FoundryCraftItems.LEAD_HOE.getRegistryName(), 2F, 2F, Refercence.lead, null);
-		lithiumHoe = itemList[itemIndex++] = new ItemLithiumHoe(FoundryCraftItems.LITHIUM_HOE.getUnlocalizedName(), FoundryCraftItems.LITHIUM_HOE.getRegistryName(), 2F, 2F, Refercence.lithium, null);
-		magnesiumHoe = itemList[itemIndex++] = new ItemMagnesiumHoe(FoundryCraftItems.MAGNESIUM_HOE.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_HOE.getRegistryName(), 2F, 2F, Refercence.magnesium, null);
-		nickelHoe = itemList[itemIndex++] = new ItemNickelHoe(FoundryCraftItems.NICKEL_HOE.getUnlocalizedName(), FoundryCraftItems.NICKEL_HOE.getRegistryName(), 2F, 2F, Refercence.nickel, null);
-		platinumHoe = itemList[itemIndex++] = new ItemPlatinumHoe(FoundryCraftItems.PLATINUM_HOE.getUnlocalizedName(), FoundryCraftItems.PLATINUM_HOE.getRegistryName(), 2F, 2F, Refercence.platinum, null);
-		silverHoe = itemList[itemIndex++] = new ItemSilverHoe(FoundryCraftItems.SILVER_HOE.getUnlocalizedName(), FoundryCraftItems.SILVER_HOE.getRegistryName(), 2F, 2F, Refercence.silver, null);
-		tinHoe = itemList[itemIndex++] = new ItemTinHoe(FoundryCraftItems.TIN_HOE.getUnlocalizedName(), FoundryCraftItems.TIN_HOE.getRegistryName(), 2F, 2F, Refercence.tin, null);
-		titaniumHoe = itemList[itemIndex++] = new ItemTitaniumHoe(FoundryCraftItems.TITANIUM_HOE.getUnlocalizedName(), FoundryCraftItems.TITANIUM_HOE.getRegistryName(), 2F, 2F, Refercence.titanium, null);
-		tungstenHoe = itemList[itemIndex++] = new ItemTungstenHoe(FoundryCraftItems.TUNGSTEN_HOE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_HOE.getRegistryName(), 2F, 2F, Refercence.tungsten, null);
-		uraniumHoe = itemList[itemIndex++] = new ItemUraniumHoe(FoundryCraftItems.URANIUM_HOE.getUnlocalizedName(), FoundryCraftItems.URANIUM_HOE.getRegistryName(), 2F, 2F, Refercence.zinc, null);
-		zincHoe = itemList[itemIndex++] = new ItemZincHoe(FoundryCraftItems.ZINC_HOE.getUnlocalizedName(), FoundryCraftItems.ZINC_HOE.getRegistryName(), 2F, 2F, Refercence.zinc, null);
+		itemList.add(aluminiumHoe = new ItemAluminiumHoe(FoundryCraftItems.ALUMINIUM_HOE, 2F, 2F, Reference.aluminium, null));
+		itemList.add(cobaltHoe = new ItemCobaltHoe(FoundryCraftItems.COBALT_HOE, 2F, 2F, Reference.cobalt, null));
+		itemList.add(copperHoe = new ItemCopperHoe(FoundryCraftItems.COPPER_HOE, 2F, 2F, Reference.copper, null));
+		itemList.add(leadHoe = new ItemLeadHoe(FoundryCraftItems.LEAD_HOE, 2F, 2F, Reference.lead, null));
+		itemList.add(lithiumHoe = new ItemLithiumHoe(FoundryCraftItems.LITHIUM_HOE, 2F, 2F, Reference.lithium, null));
+		itemList.add(magnesiumHoe = new ItemMagnesiumHoe(FoundryCraftItems.MAGNESIUM_HOE, 2F, 2F, Reference.magnesium, null));
+		itemList.add(nickelHoe = new ItemNickelHoe(FoundryCraftItems.NICKEL_HOE, 2F, 2F, Reference.nickel, null));
+		itemList.add(platinumHoe = new ItemPlatinumHoe(FoundryCraftItems.PLATINUM_HOE, 2F, 2F, Reference.platinum, null));
+		itemList.add(silverHoe = new ItemSilverHoe(FoundryCraftItems.SILVER_HOE, 2F, 2F, Reference.silver, null));
+		itemList.add(tinHoe = new ItemTinHoe(FoundryCraftItems.TIN_HOE, 2F, 2F, Reference.tin, null));
+		itemList.add(titaniumHoe = new ItemTitaniumHoe(FoundryCraftItems.TITANIUM_HOE, 2F, 2F, Reference.titanium, null));
+		itemList.add(tungstenHoe = new ItemTungstenHoe(FoundryCraftItems.TUNGSTEN_HOE, 2F, 2F, Reference.tungsten, null));
+		itemList.add(uraniumHoe = new ItemUraniumHoe(FoundryCraftItems.URANIUM_HOE, 2F, 2F, Reference.zinc, null));
+		itemList.add(zincHoe = new ItemZincHoe(FoundryCraftItems.ZINC_HOE, 2F, 2F, Reference.zinc, null));
 				
-		aluminiumPickaxe = itemList[itemIndex++] = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_PICKAXE.getRegistryName(), 1F, 5F, Refercence.aluminium, Refercence.PICKAXE_EFFECTIVE_ON);
-		cobaltPickaxe = itemList[itemIndex++] = new ItemCobaltPickaxe(FoundryCraftItems.COBALT_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COBALT_PICKAXE.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.PICKAXE_EFFECTIVE_ON);
-		copperPickaxe = itemList[itemIndex++] = new ItemCopperPickaxe(FoundryCraftItems.COPPER_PICKAXE.getUnlocalizedName(), FoundryCraftItems.COPPER_PICKAXE.getRegistryName(), 2F, 3F, Refercence.copper, Refercence.PICKAXE_EFFECTIVE_ON);
-		leadPickaxe = itemList[itemIndex++] = new ItemLeadPickaxe(FoundryCraftItems.LEAD_PICKAXE.getUnlocalizedName(), FoundryCraftItems.LEAD_PICKAXE.getRegistryName(), 2F, 2F, Refercence.lead, Refercence.PICKAXE_EFFECTIVE_ON);
-		lithiumPickaxe = itemList[itemIndex++] = new ItemLithiumPickaxe(FoundryCraftItems.LITHIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.LITHIUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.PICKAXE_EFFECTIVE_ON);
-		magnesiumPickaxe = itemList[itemIndex++] = new ItemMagnesiumPickaxe(FoundryCraftItems.MAGNESIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.PICKAXE_EFFECTIVE_ON);
-		nickelPickaxe = itemList[itemIndex++] = new ItemNickelPickaxe(FoundryCraftItems.NICKEL_PICKAXE.getUnlocalizedName(), FoundryCraftItems.NICKEL_PICKAXE.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.PICKAXE_EFFECTIVE_ON);
-		platinumPickaxe = itemList[itemIndex++] = new ItemNickelPickaxe(FoundryCraftItems.PLATINUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.PLATINUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.PICKAXE_EFFECTIVE_ON);
-		silverPickaxe = itemList[itemIndex++] = new ItemSilverPickaxe(FoundryCraftItems.SILVER_PICKAXE.getUnlocalizedName(), FoundryCraftItems.SILVER_PICKAXE.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.PICKAXE_EFFECTIVE_ON);
-		tinPickaxe = itemList[itemIndex++] = new ItemTinPickaxe(FoundryCraftItems.TIN_PICLAXE.getUnlocalizedName(), FoundryCraftItems.TIN_PICLAXE.getRegistryName(), 2F, 2F, Refercence.tin, Refercence.PICKAXE_EFFECTIVE_ON);
-		titaniumPickaxe = itemList[itemIndex++] = new ItemTitaniumPickaxe(FoundryCraftItems.TITANIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.TITANIUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.PICKAXE_EFFECTIVE_ON);
-		tungstenPickaxe = itemList[itemIndex++] = new ItemTungstenPickaxe(FoundryCraftItems.TUNGSTEN_PICKAXE.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_PICKAXE.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.PICKAXE_EFFECTIVE_ON);
-		uraniumPickaxe = itemList[itemIndex++] = new ItemUraniumPickaxe(FoundryCraftItems.URANIUM_PICKAXE.getUnlocalizedName(), FoundryCraftItems.URANIUM_PICKAXE.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.PICKAXE_EFFECTIVE_ON);
-		zincPickaxe = itemList[itemIndex++] = new ItemZincPickaxe(FoundryCraftItems.ZINC_PICKAXE.getUnlocalizedName(), FoundryCraftItems.ZINC_PICKAXE.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.PICKAXE_EFFECTIVE_ON);
+		itemList.add(aluminiumPickaxe = new ItemAluminiumPickaxe(FoundryCraftItems.ALUMINIUM_PICKAXE, 1F, 5F, Reference.aluminium, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(cobaltPickaxe = new ItemCobaltPickaxe(FoundryCraftItems.COBALT_PICKAXE, 2F, 2F, Reference.cobalt, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(copperPickaxe = new ItemCopperPickaxe(FoundryCraftItems.COPPER_PICKAXE, 2F, 3F, Reference.copper, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(leadPickaxe = new ItemLeadPickaxe(FoundryCraftItems.LEAD_PICKAXE, 2F, 2F, Reference.lead, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(lithiumPickaxe = new ItemLithiumPickaxe(FoundryCraftItems.LITHIUM_PICKAXE, 2F, 2F, Reference.lithium, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(magnesiumPickaxe = new ItemMagnesiumPickaxe(FoundryCraftItems.MAGNESIUM_PICKAXE, 2F, 2F, Reference.magnesium, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(nickelPickaxe = new ItemNickelPickaxe(FoundryCraftItems.NICKEL_PICKAXE, 2F, 2F, Reference.nickel, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(platinumPickaxe = new ItemPlatinumPickaxe(FoundryCraftItems.PLATINUM_PICKAXE, 2F, 2F, Reference.platinum, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(silverPickaxe = new ItemSilverPickaxe(FoundryCraftItems.SILVER_PICKAXE, 2F, 2F, Reference.silver, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(tinPickaxe = new ItemTinPickaxe(FoundryCraftItems.TIN_PICLAXE, 2F, 2F, Reference.tin, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(titaniumPickaxe = new ItemTitaniumPickaxe(FoundryCraftItems.TITANIUM_PICKAXE, 2F, 2F, Reference.titanium, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(tungstenPickaxe = new ItemTungstenPickaxe(FoundryCraftItems.TUNGSTEN_PICKAXE, 2F, 2F, Reference.tungsten, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(uraniumPickaxe = new ItemUraniumPickaxe(FoundryCraftItems.URANIUM_PICKAXE, 2F, 2F, Reference.uranium, Reference.PICKAXE_EFFECTIVE_ON));
+		itemList.add(zincPickaxe = new ItemZincPickaxe(FoundryCraftItems.ZINC_PICKAXE, 2F, 2F, Reference.zinc, Reference.PICKAXE_EFFECTIVE_ON));
 		
-		aluminiumShovel = itemList[itemIndex++] = new ItemAluminiumShovel(FoundryCraftItems.ALUMINIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.ALUMINIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.aluminium, Refercence.SHOVEL_EFFECTIVE_ON);
-		cobaltShovel = itemList[itemIndex++] = new ItemCobaltShovel(FoundryCraftItems.COBALT_SHOVEL.getUnlocalizedName(), FoundryCraftItems.COBALT_SHOVEL.getRegistryName(), 2F, 2F, Refercence.cobalt, Refercence.SHOVEL_EFFECTIVE_ON);
-		copperShovel = itemList[itemIndex++] = new ItemCopperShovel(FoundryCraftItems.COPPER_SHOVEL.getUnlocalizedName(), FoundryCraftItems.COPPER_SHOVEL.getRegistryName(), 2F, 2F, Refercence.copper, Refercence.SHOVEL_EFFECTIVE_ON);
-		leadShovel = itemList[itemIndex++] = new ItemLeadShovel(FoundryCraftItems.LEAD_SHOVEL.getUnlocalizedName(), FoundryCraftItems.LEAD_SHOVEL.getRegistryName(), 2F, 2F, Refercence.lead, Refercence.SHOVEL_EFFECTIVE_ON);
-		lithiumShovel = itemList[itemIndex++] = new ItemLithiumShovel(FoundryCraftItems.LITHIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.LITHIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.lithium, Refercence.SHOVEL_EFFECTIVE_ON);
-		magnesiumShovel = itemList[itemIndex++] = new ItemMagnesiumShovel(FoundryCraftItems.MAGNESIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.MAGNESIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.magnesium, Refercence.SHOVEL_EFFECTIVE_ON);
-		nickelShovel = itemList[itemIndex++] = new ItemNickelShovel(FoundryCraftItems.NICKEL_SHOVEL.getUnlocalizedName(), FoundryCraftItems.NICKEL_SHOVEL.getRegistryName(), 2F, 2F, Refercence.nickel, Refercence.SHOVEL_EFFECTIVE_ON);
-		platinumShovel = itemList[itemIndex++] = new ItemPlatinumShovel(FoundryCraftItems.PLATINUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.PLATINUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.platinum, Refercence.SHOVEL_EFFECTIVE_ON);
-		silverShovel = itemList[itemIndex++] = new ItemSilverShovel(FoundryCraftItems.SILVER_SHOVEL.getUnlocalizedName(), FoundryCraftItems.SILVER_SHOVEL.getRegistryName(), 2F, 2F, Refercence.silver, Refercence.SHOVEL_EFFECTIVE_ON);
-		tinShovel = itemList[itemIndex++] = new ItemSilverShovel(FoundryCraftItems.TIN_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TIN_SHOVEL.getRegistryName(), 2F, 2F, Refercence.tin, Refercence.SHOVEL_EFFECTIVE_ON);
-		titaniumShovel = itemList[itemIndex++] = new ItemTitaniumShovel(FoundryCraftItems.TITANIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TITANIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.titanium, Refercence.SHOVEL_EFFECTIVE_ON);
-		tungstenShovel = itemList[itemIndex++] = new ItemTungstenShovel(FoundryCraftItems.TUNGSTEN_SHOVEL.getUnlocalizedName(), FoundryCraftItems.TUNGSTEN_SHOVEL.getRegistryName(), 2F, 2F, Refercence.tungsten, Refercence.SHOVEL_EFFECTIVE_ON);
-		uraniumShovel = itemList[itemIndex++] = new ItemUraniumShovel(FoundryCraftItems.URANIUM_SHOVEL.getUnlocalizedName(), FoundryCraftItems.URANIUM_SHOVEL.getRegistryName(), 2F, 2F, Refercence.uranium, Refercence.SHOVEL_EFFECTIVE_ON);
-		zincShovel = itemList[itemIndex++] = new ItemZincShovel(FoundryCraftItems.ZINC_SHOVEL.getUnlocalizedName(), FoundryCraftItems.ZINC_SHOVEL.getRegistryName(), 2F, 2F, Refercence.zinc, Refercence.SHOVEL_EFFECTIVE_ON);
+		itemList.add(aluminiumShovel = new ItemAluminiumShovel(FoundryCraftItems.ALUMINIUM_SHOVEL, 2F, 2F, Reference.aluminium, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(cobaltShovel = new ItemCobaltShovel(FoundryCraftItems.COBALT_SHOVEL, 2F, 2F, Reference.cobalt, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(copperShovel = new ItemCopperShovel(FoundryCraftItems.COPPER_SHOVEL, 2F, 2F, Reference.copper, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(leadShovel = new ItemLeadShovel(FoundryCraftItems.LEAD_SHOVEL, 2F, 2F, Reference.lead, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(lithiumShovel = new ItemLithiumShovel(FoundryCraftItems.LITHIUM_SHOVEL, 2F, 2F, Reference.lithium, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(magnesiumShovel = new ItemMagnesiumShovel(FoundryCraftItems.MAGNESIUM_SHOVEL, 2F, 2F, Reference.magnesium, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(nickelShovel = new ItemNickelShovel(FoundryCraftItems.NICKEL_SHOVEL, 2F, 2F, Reference.nickel, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(platinumShovel = new ItemPlatinumShovel(FoundryCraftItems.PLATINUM_SHOVEL, 2F, 2F, Reference.platinum, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(silverShovel = new ItemSilverShovel(FoundryCraftItems.SILVER_SHOVEL, 2F, 2F, Reference.silver, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(tinShovel = new ItemSilverShovel(FoundryCraftItems.TIN_SHOVEL, 2F, 2F, Reference.tin, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(titaniumShovel = new ItemTitaniumShovel(FoundryCraftItems.TITANIUM_SHOVEL, 2F, 2F, Reference.titanium, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(tungstenShovel = new ItemTungstenShovel(FoundryCraftItems.TUNGSTEN_SHOVEL, 2F, 2F, Reference.tungsten, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(uraniumShovel = new ItemUraniumShovel(FoundryCraftItems.URANIUM_SHOVEL, 2F, 2F, Reference.uranium, Reference.SHOVEL_EFFECTIVE_ON));
+		itemList.add(zincShovel = new ItemZincShovel(FoundryCraftItems.ZINC_SHOVEL, 2F, 2F, Reference.zinc, Reference.SHOVEL_EFFECTIVE_ON));
 		
-		itemIndex = 0;
-		
-		System.out.println("Number of items in FoundryItems init: " + itemList.length);
+		System.out.println("Number of items in FoundryItems init: " + itemList.size());
 	}
 	
 	
@@ -288,22 +288,22 @@ public class FoundryItems
 	{
 		System.out.println("Loading in Blocks:");
 		
-		for (int i = 0; i < itemList.length; i++) 
+		for (int i = 0; i < itemList.size(); i++) 
 		{
-			if(itemList[i] != null)
+			if(itemList.get(i) != null)
 			{
-				System.out.println(itemList[i].getUnlocalizedName());
-				GameRegistry.register(itemList[i]);
+				System.out.println(itemList.get(i).getUnlocalizedName());
+				GameRegistry.register(itemList.get(i));
 			}
 		}
 	}
 	
 	public static void registerRenders()
 	{
-		for (int i = 0; i < itemList.length; i++) 
+		for (int i = 0; i < itemList.size(); i++) 
 		{
-			if(itemList[i] != null)
-				registerRender(itemList[i]);
+			if(itemList.get(i) != null)
+				registerRender(itemList.get(i));
 		}
 	}
 	

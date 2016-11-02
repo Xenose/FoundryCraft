@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.ingots;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemMagnesiumIngot extends FoundryItem
 {
 
-	public ItemMagnesiumIngot(String unlocalizedName, String registryName) 
+	public ItemMagnesiumIngot(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 
 }

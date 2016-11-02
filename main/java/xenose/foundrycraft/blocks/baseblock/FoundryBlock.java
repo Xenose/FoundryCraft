@@ -7,14 +7,28 @@ import java.io.IOException;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 
 public class FoundryBlock extends Block
 {
+	public FoundryBlock(Material materialIn, FoundryCraftBlocks foundryEnumBlock, float hardness)
+	{
+		super(materialIn);
+		setHardness(1);
+	}
+	
+	public void setUnlocalizedNameAndRegistry(FoundryCraftBlocks foundryEnumBlock)
+	{
+		setUnlocalizedName(foundryEnumBlock.getUnlocalizedName());
+		setRegistryName(foundryEnumBlock.getRegistryName());
+		
+		setCreativeTab(Reference.CREATIVE_TAB);
+	}
+	
 	public FoundryBlock(Material materialIn, String unlocalizedName, String registryName, float hardness)
 	{
 		super(materialIn);
-		
 		setHardness(1);
 	}
 	
@@ -23,7 +37,7 @@ public class FoundryBlock extends Block
 		setUnlocalizedName(unlocalized);
 		setRegistryName(registry);
 		
-		setCreativeTab(Refercence.CREATIVE_TAB);
+		setCreativeTab(Reference.CREATIVE_TAB);
 	}
 	
 	public boolean hasCustomModel()

@@ -7,18 +7,19 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.init.FoundryBlocks;
 
 public class BlockVirusBlock extends FoundryBlock
 {
-	public BlockVirusBlock(Material materialIn, String unlocalizedName, String registryName, float hardness) 
+	public BlockVirusBlock(Material materialIn, FoundryCraftBlocks foundryEnum, float hardness) 
 	{
-		super(materialIn, unlocalizedName, registryName, hardness);
-		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
+		super(materialIn, foundryEnum, hardness);
+		setUnlocalizedNameAndRegistry(foundryEnum);
 		setTickRandomly(true);
-		setCreativeTab(Refercence.CRETIVE_TAB_DEBUG_TOOLS);
+		setCreativeTab(Reference.CRETIVE_TAB_DEBUG_TOOLS);
 	}
 	
 	@Override

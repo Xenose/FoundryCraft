@@ -21,7 +21,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.fml.common.registry.IForgeRegistry;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.world.biomes.FoundryBiome;
 
@@ -106,7 +106,7 @@ public class FoundryWorldGen implements IWorldGenerator
 	{
 		if (maxHeight > 256 || minHeight < 0 || maxHeight < minHeight)
 		{
-			throw new IllegalArgumentException(Refercence.MOD_ID + ": HEIGTH IS INVALID!!!");
+			throw new IllegalArgumentException(Reference.MOD_ID + ": HEIGTH IS INVALID!!!");
 		}
 		
 		int heigthDiff = maxHeight - minHeight + 1;

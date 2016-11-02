@@ -13,6 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
+import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 import xenose.foundrycraft.blocks.baseblock.FoundryBlock;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.misc.FoundryMultiblock;
@@ -20,10 +21,10 @@ import xenose.foundrycraft.misc.FoundryMultiblock;
 public class BlockBleedingObsiden extends FoundryBlock
 {
 	
-	public BlockBleedingObsiden(Material materialIn, String unlocalizedName, String registryName, float hardness) 
+	public BlockBleedingObsiden(Material materialIn, FoundryCraftBlocks foundryEnum, float hardness) 
 	{
-		super(materialIn, unlocalizedName, registryName, hardness);
-		setUnlocalizedNameAndRegistry(unlocalizedName, registryName);
+		super(materialIn, foundryEnum, hardness);
+		setUnlocalizedNameAndRegistry(foundryEnum);
 	}
 	
 	@Override

@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.dusts;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemTitaniumDust extends FoundryItem 
 {
 
-	public ItemTitaniumDust(String unlocalizedName, String registryName) 
+	public ItemTitaniumDust(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 
 }

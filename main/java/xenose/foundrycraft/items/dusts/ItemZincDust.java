@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.dusts;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemZincDust extends FoundryItem
 {
 
-	public ItemZincDust(String unlocalizedName, String registryName) 
+	public ItemZincDust(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 	
 }

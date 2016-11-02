@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.ingots;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemCobaltIngot extends FoundryItem 
 {
 
-	public ItemCobaltIngot(String unlocalizedName, String registryName) 
+	public ItemCobaltIngot(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);	
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);	
 	}
 
 }

@@ -15,13 +15,14 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 
 public class FoundryShovel extends FoundryTool
 {
 
-	public FoundryShovel(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	public FoundryShovel(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
 	}
 	
 	@Override

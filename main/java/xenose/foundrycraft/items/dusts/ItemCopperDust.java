@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.dusts;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemCopperDust extends FoundryItem
 {
 
-	public ItemCopperDust(String unlocalizedName, String registryName) 
+	public ItemCopperDust(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 	
 }

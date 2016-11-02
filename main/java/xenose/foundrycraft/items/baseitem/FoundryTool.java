@@ -7,15 +7,27 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemTool;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 
 public class FoundryTool extends ItemTool 
 {
+	public FoundryTool(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	{
+		super(attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		setCreativeTab(Reference.CREATIVE_TAB_TOOLS);
+	}
+	
+	public void setunlocalizedAndRegistryName(FoundryCraftItems foundryEnum)
+	{
+		setUnlocalizedName(foundryEnum.getUnlocalizedName());
+		setRegistryName(foundryEnum.getRegistryName());
+	}
 
 	public FoundryTool(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
 		super(attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
-		setCreativeTab(Refercence.CREATIVE_TAB_TOOLS);
+		setCreativeTab(Reference.CREATIVE_TAB_TOOLS);
 	}
 	
 	public void setunlocalizedAndRegistryName(String unlocalizedName,String registryName)

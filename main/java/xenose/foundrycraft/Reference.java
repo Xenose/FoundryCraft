@@ -11,7 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item.ToolMaterial;
 import xenose.foundrycraft.FoundryTab;
 
-public class Refercence 
+public class Reference 
 {
 	
 	public static final String MOD_ID = "xfc";

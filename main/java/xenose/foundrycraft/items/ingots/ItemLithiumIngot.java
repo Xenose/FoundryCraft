@@ -1,14 +1,15 @@
 package xenose.foundrycraft.items.ingots;
 
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 
 public class ItemLithiumIngot extends FoundryItem 
 {
 
-	public ItemLithiumIngot(String unlocalizedName, String registryName) 
+	public ItemLithiumIngot(FoundryCraftItems foundryEnum) 
 	{
-		super(unlocalizedName, registryName);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
+		super(foundryEnum);
+		setunlocalizedAndRegistryName(foundryEnum);
 	}
 
 }

@@ -23,14 +23,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 
 public class FoundryHoe extends FoundryTool 
 {
 	private float speed;
 	
-	public FoundryHoe(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, float harvestSpeed, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	public FoundryHoe(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, float harvestSpeed, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
 		this.speed = harvestSpeed;
 	}
 

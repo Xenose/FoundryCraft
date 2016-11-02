@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import xenose.foundrycraft.Refercence.FoundryCraftItems;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.eventhandler.FoundryEventHandler;
 import xenose.foundrycraft.init.FoundryBiomes;
 import xenose.foundrycraft.init.FoundryBlocks;
@@ -24,14 +24,14 @@ import xenose.foundrycraft.proxy.CommonProxy;
 import xenose.foundrycraft.proxy.GuiProxy;
 import xenose.foundrycraft.world.FoundryWorldGen;
 
-@Mod(modid = Refercence.MOD_ID, name = Refercence.NAME, version = Refercence.VERSION, acceptedMinecraftVersions = Refercence.ACCEPTED_VERSIONS)
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FoundryCraft 
 {
 	
 	@Instance
 	public static FoundryCraft instance;
 	
-	@SidedProxy(clientSide = Refercence.CLIENT_PROXY_CLASS, serverSide = Refercence.SERVER_PROXY_CLASS)
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
 	@EventHandler

@@ -10,7 +10,7 @@ import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
 
 public class FoundryBaseContainer extends BlockContainer
 {
@@ -24,7 +24,7 @@ public class FoundryBaseContainer extends BlockContainer
 		setUnlocalizedName(unlocalized);
 		setRegistryName(registry);
 		
-		setCreativeTab(Refercence.CREATIVE_TAB);
+		setCreativeTab(Reference.CREATIVE_TAB);
 	}
 	
 	@Override

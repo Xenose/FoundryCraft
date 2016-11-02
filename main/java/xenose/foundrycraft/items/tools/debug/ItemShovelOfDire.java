@@ -9,18 +9,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xenose.foundrycraft.Refercence;
+import xenose.foundrycraft.Reference;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 import xenose.foundrycraft.items.baseitem.FoundryTool;
 
 public class ItemShovelOfDire extends FoundryTool
 {
 	private final int harrvestArea = 16;
 	
-	public ItemShovelOfDire(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
+	public ItemShovelOfDire(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
-		setunlocalizedAndRegistryName(unlocalizedName, registryName);
-		setCreativeTab(Refercence.CRETIVE_TAB_DEBUG_TOOLS);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		setunlocalizedAndRegistryName(foundryEnum);
+		setCreativeTab(Reference.CRETIVE_TAB_DEBUG_TOOLS);
 	}
 	
 	@Override

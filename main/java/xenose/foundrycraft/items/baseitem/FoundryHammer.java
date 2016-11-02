@@ -9,14 +9,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import xenose.foundrycraft.Reference.FoundryCraftItems;
 
 public class FoundryHammer extends FoundryTool
 {
 	private int harrvestArea;
 
-	public FoundryHammer(String unlocalizedName, String registryName, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn, int harrvestArea) 
+	public FoundryHammer(FoundryCraftItems foundryEnum, float attackDamageIn, float attackSpeedIn, ToolMaterial materialIn, Set<Block> effectiveBlocksIn, int harrvestArea) 
 	{
-		super(unlocalizedName, registryName, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
+		super(foundryEnum, attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
 		this.harrvestArea = harrvestArea;
 	}
 	
