@@ -51,6 +51,8 @@ public class FoundryCraft
 		FoundryItems.init();
 		System.out.println("Register FoundryItems");
 		FoundryItems.register();
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new FoundryGUIHandler());
 	}
 	
 	@EventHandler
@@ -59,8 +61,6 @@ public class FoundryCraft
 		FoundryDictionary.init();
 		FoundryCrafting.register();
 		FoundrySmelting.init();
-		
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new FoundryGUIHandler());
 		
 		System.out.println("initializing Common Proxy");
 		proxy.init();
