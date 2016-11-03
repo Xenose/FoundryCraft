@@ -89,6 +89,7 @@ public class Reference
 	
 	public static enum FoundryCraftItems
 	{	
+		INTRO_BOOK("introBook","ItemIntroBook"),
 		WET_DARK_STONE_BRICK("wetDarkStoneBrick","ItemWetDarkStoneBrick"),
 		SHOVEL_OF_DIRE("shovelOfDire","ItemShovelOfDire"),
 		

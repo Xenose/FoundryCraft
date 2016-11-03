@@ -31,11 +31,14 @@ import xenose.foundrycraft.items.tools.hoe.*;
 import xenose.foundrycraft.items.tools.pickaxe.*;
 import xenose.foundrycraft.items.tools.shovel.*;
 import xenose.foundrycraft.items.tools.sword.*;
+import xenose.foundrycraft.items.tools.books.*;
 
 public class FoundryItems
 {	
 	
 	public static Item 
+	
+		introBook,
 	
 		// other dusts
 		lapisLazuliDust,
@@ -172,6 +175,7 @@ public class FoundryItems
 	{
 		itemList = new ArrayList<Item>();
 		
+		itemList.add(introBook = new ItemIntroBook(FoundryCraftItems.INTRO_BOOK));
 		itemList.add(wetDarkStoneBrick = new ItemWetDarkStoneBrick(FoundryCraftItems.WET_DARK_STONE_BRICK));
 		itemList.add(shovelOfDire = new ItemShovelOfDire(FoundryCraftItems.SHOVEL_OF_DIRE, 10, 10, Reference.debug, Reference.HAMMER_EFFECTIVE_ON));
 		
@@ -288,22 +292,22 @@ public class FoundryItems
 	{
 		System.out.println("Loading in Blocks:");
 		
-		for (int i = 0; i < itemList.size(); i++) 
+		for (Item item : itemList) 
 		{
-			if(itemList.get(i) != null)
+			if(item != null)
 			{
-				System.out.println(itemList.get(i).getUnlocalizedName());
-				GameRegistry.register(itemList.get(i));
+				System.out.println(item.getUnlocalizedName());
+				GameRegistry.register(item);
 			}
 		}
 	}
 	
 	public static void registerRenders()
 	{
-		for (int i = 0; i < itemList.size(); i++) 
+		for (Item item : itemList) 
 		{
-			if(itemList.get(i) != null)
-				registerRender(itemList.get(i));
+			if(item != null)
+				registerRender(item);
 		}
 	}
 	

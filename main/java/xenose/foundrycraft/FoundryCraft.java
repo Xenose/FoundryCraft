@@ -17,11 +17,11 @@ import xenose.foundrycraft.init.FoundryBiomes;
 import xenose.foundrycraft.init.FoundryBlocks;
 import xenose.foundrycraft.init.FoundryCrafting;
 import xenose.foundrycraft.init.FoundryDictionary;
+import xenose.foundrycraft.init.FoundryGUIHandler;
 import xenose.foundrycraft.init.FoundryItems;
 import xenose.foundrycraft.init.FoundrySmelting;
 import xenose.foundrycraft.items.baseitem.FoundryItem;
 import xenose.foundrycraft.proxy.CommonProxy;
-import xenose.foundrycraft.proxy.GuiProxy;
 import xenose.foundrycraft.world.FoundryWorldGen;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
@@ -60,7 +60,7 @@ public class FoundryCraft
 		FoundryCrafting.register();
 		FoundrySmelting.init();
 		
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiProxy());
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new FoundryGUIHandler());
 		
 		System.out.println("initializing Common Proxy");
 		proxy.init();

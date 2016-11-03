@@ -1,8 +1,9 @@
 item.clearTool.name=Clear Tool(Debug)
-
 item.beer.name=Beer
 item.bluestone.name=Bluestone
 item.lapisLazuliDust.name=Lapis Lazulidust
+
+item.introBook.name=Foundrypedia
 
 item.shovelOfDire.name=Shovel of Dire
 
@@ -35,6 +36,21 @@ item.titaniumHammer.name=Titanium Hammer
 item.tungstenHammer.name=Tungsten Hammer
 item.uraniumHammer.name=Uranium Hammer
 item.zincHammer.name=Zinc Hammer
+
+item.aluminiumHoe.name=Aluminium Hoe
+item.cobaltHoe.name=Cobalt Hoe
+item.copperHoe.name=Copper Hoe
+item.leadHoe.name=Lead Hoe
+item.lithiumHoe.name=Lithium Hoe
+item.magnesiumHoe.name=Magnesium Hoe
+item.nickelHoe.name=Nickel Hoe
+item.platinumHoe.name=Platinum Hoe
+item.silverHoe.name=Silver Hoe
+item.tinHoe.name=Tin Hoe
+item.titaniumHoe.name=Titanium Hoe
+item.tungstenHoe.name=Tungsten Hoe
+item.uraniumHoe.name=Uranium Hoe
+item.zincHoe.name=Zinc Hoe
 
 item.aluminiumPickaxe.name=Aluminium Pickaxe
 item.cobaltPickaxe.name=Cobalt Pickaxe
@@ -102,7 +118,7 @@ tile.lamp.name=Lamp
 tile.pedestal.name=Pedestal
 tile.framedWool.name=Framed Wool
 
-tile.blackStoneBrick.name=Black Stone Brick
+tile.blackStoneBrick.name=Dark Stone Brick
 tile.bleedingObsiden.name=Bleeding Obsiden
 
 tile.aluminiumOre.name=Aluminium Ore
@@ -137,3 +153,4 @@ tile.zincBlock.name=Zinc Block
 
 itemGroup.tabFoundryTab=FoundryCraft
 itemGroup.tabFoundryTools=FoundryCraft Tools
+itemGroup.tabFoundryDebugTools=FoundryCraft Debug Tools
