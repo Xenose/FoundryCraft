@@ -1,0 +1,14 @@
+{
+    "parent": "block/orientable",
+    
+    "textures": 
+    {
+        "particle": "xfc:blocks/powerFurnaceTop",
+        "down": "xfc:blocks/powerFurnaceBottom",
+        "top": "xfc:blocks/powerFurnaceTop",
+        "front": "xfc:blocks/powerFurnaceOff",
+        "east": "xfc:blocks/powerFurnaceEast",     
+        "west": "xfc:blocks/powerFurnaceWest",
+        "south": "xfc:blocks/powerFurnaceBack"
+    }
+}

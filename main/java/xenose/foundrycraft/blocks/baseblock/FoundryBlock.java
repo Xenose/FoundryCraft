@@ -12,6 +12,9 @@ import xenose.foundrycraft.Reference.FoundryCraftBlocks;
 
 public class FoundryBlock extends Block
 {
+	private String subFolderModels;
+	private FoundryCraftBlocks fcBlock;
+	
 	public FoundryBlock(Material materialIn, FoundryCraftBlocks foundryEnumBlock, float hardness)
 	{
 		super(materialIn);
@@ -23,15 +26,36 @@ public class FoundryBlock extends Block
 		setUnlocalizedName(foundryEnumBlock.getUnlocalizedName());
 		setRegistryName(foundryEnumBlock.getRegistryName());
 		
+		fcBlock = foundryEnumBlock;
+		
 		setCreativeTab(Reference.CREATIVE_TAB);
 	}
 	
+	public void setSubFolder(String subFolder)
+	{
+		subFolderModels = subFolder;
+	}
+	
+	public String getFolderAndFile()
+	{
+		return Reference.MOD_ID + ":" + subFolderModels + "/" + fcBlock.getRegistryName();
+	}
+	
+	public boolean hasSubFolderModels()
+	{
+		if(subFolderModels != null)
+			return true;
+		return false;
+	}
+	
+	@Deprecated
 	public FoundryBlock(Material materialIn, String unlocalizedName, String registryName, float hardness)
 	{
 		super(materialIn);
 		setHardness(1);
 	}
 	
+	@Deprecated
 	public void setUnlocalizedNameAndRegistry(String unlocalized, String registry)
 	{
 		setUnlocalizedName(unlocalized);

@@ -6,12 +6,13 @@ import com.google.common.collect.Sets;
 
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraft.block.Block;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item.ToolMaterial;
 import xenose.foundrycraft.FoundryTab;
 
-public class Reference 
+public class Reference
 {
 	
 	public static final String MOD_ID = "xfc";
@@ -96,7 +97,7 @@ public class Reference
 		ALUMINIUM_AXE("aluminiumAxe","ItemAluminiumAxe"),
 		ALUMINIUM_HAMMER("aluminiumHammer","ItemAluminiumHammer"),
 		ALUMINIUM_HOE("aluminiumHoe","ItemAluminiumHoe"),
-		ALUMINIUM_PICKAXE("aluminiumPickaxe","ItemAluminiumPickaxe"),
+		ALUMINIUM_PICKAXE("aluminiumPickaxe", "ItemAluminiumPickaxe"),
 		ALUMINIUM_SHOVEL("aluminiumShovel","ItemAluminiumShovel"),
 		ALUMINIUM_SWORD("aluminiumSword","ItemAluminiumSword"),
 		
@@ -237,7 +238,7 @@ public class Reference
 	public static enum FoundryCraftBlocks
 	{	
 		VIRUS_BLOCK("virusBlock","BlockVirusBlock"),
-		TEST_CONTAINER_BLOCK("testContainerBlock","BlockTestContainerBlock"),
+		BLUE_SPARK_FURNACE("blueSparkFurnace","BlockBlueSparkFurnace"),
 		
 		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
 		BLEEDING_OBSIDEN("bleedingObsiden","BlockBleedingObsiden"),
@@ -273,16 +274,16 @@ public class Reference
 		URANIUM_BLOCK("uraniumBlock","BlockUraniumBlock"),
 		ZINC_BLOCK("zincBlock","BlockZincBlock");
 		
-		private String UnlocalizedName;
+		private String unlocalizedName;
 		private String registryName;
 		
 		private FoundryCraftBlocks(String unlocalizedName, String registryName) 
 		{
-			this.UnlocalizedName = unlocalizedName;
+			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}
 		
-		public String getUnlocalizedName() { return UnlocalizedName; }
+		public String getUnlocalizedName() { return unlocalizedName; }
 		public String getRegistryName() { return registryName; }
 	}
 
