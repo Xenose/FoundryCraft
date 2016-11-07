@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:silverBlock" }
+        "normal": { "model": "xfc:metal/silverBlock" }
     }
 }

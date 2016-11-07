@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:platinumBlock" }
+        "normal": { "model": "xfc:metal/platinumBlock" }
     }
 }

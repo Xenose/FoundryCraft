@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:magnesiumBlock" }
+        "normal": { "model": "xfc:metal/magnesiumBlock" }
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:tungstenBlock" }
+        "normal": { "model": "xfc:metal/tungstenBlock" }
     }
 }

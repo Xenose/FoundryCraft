@@ -239,6 +239,7 @@ public class Reference
 	{	
 		VIRUS_BLOCK("virusBlock","BlockVirusBlock"),
 		BLUE_SPARK_FURNACE("blueSparkFurnace","BlockBlueSparkFurnace"),
+		SNOW_STONE("snowStone","BlockSnowStone"),
 		
 		BLACK_STONE_BRICK("blackStoneBrick","BlockBlackStoneBrick"),
 		BLEEDING_OBSIDEN("bleedingObsiden","BlockBleedingObsiden"),

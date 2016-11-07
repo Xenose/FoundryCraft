@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:lithiumBlock" }
+        "normal": { "model": "xfc:metal/lithiumBlock" }
     }
 }

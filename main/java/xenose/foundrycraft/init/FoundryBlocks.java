@@ -27,6 +27,7 @@ public class FoundryBlocks
 	
 		virusBlock,
 		blueSparkFurnace,
+		snowStone,
 	
 		blackStoneBrick,
 		bleedingObsiden,
@@ -70,6 +71,7 @@ public class FoundryBlocks
 		
 		blockList.add(virusBlock = new BlockVirusBlock(Material.CLOTH, FoundryCraftBlocks.VIRUS_BLOCK, 3F));
 		blockList.add(blueSparkFurnace = new BlockBlueSparkFurnace(Material.IRON, FoundryCraftBlocks.BLUE_SPARK_FURNACE, 2F));
+		blockList.add(snowStone = new BlockSnowStone(Material.ROCK, FoundryCraftBlocks.SNOW_STONE, 5F));
 		blockList.add(blackStoneBrick = new BlockBlackStoneBrick(Material.ROCK, FoundryCraftBlocks.BLACK_STONE_BRICK, 1F));
 		blockList.add(bleedingObsiden = new BlockBleedingObsiden(Material.ROCK, FoundryCraftBlocks.BLEEDING_OBSIDEN, 40F));
 

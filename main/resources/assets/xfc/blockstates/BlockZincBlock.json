@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:zincBlock" }
+        "normal": { "model": "xfc:metal/zincBlock" }
     }
 }

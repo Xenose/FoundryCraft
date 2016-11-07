@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "xfc:leadBlock" }
+        "normal": { "model": "xfc:metal/leadBlock" }
     }
 }
